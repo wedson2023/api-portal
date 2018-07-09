@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVisitasTable extends Migration
+class CreateEventosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,13 @@ class CreateVisitasTable extends Migration
      */
     public function up()
     {
-        Schema::create('visitas', function (Blueprint $table) {
+        Schema::create('eventos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nome')->nullable();
+            $table->string('local');
+            $table->dateTime('data');
+            $table->integer('categoria_id')->unsigned();
+            $table->foreign('categoria_id')->references('id')->on('categorias');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreateVisitasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('visitas');
+        Schema::dropIfExists('eventos');
     }
 }

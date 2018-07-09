@@ -19,5 +19,9 @@ class CategoriasTableSeeder extends Seeder
         Categorias::create([
             'nome' => 'Onde hospedar'           
         ]);
+        
+        Categorias::create([
+            'nome' => 'Shows e Baladas'           
+        ]);
     }
 }

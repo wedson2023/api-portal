@@ -16,5 +16,5 @@ Route::get('/logout', 'AuthController@logOut');
 
 Route::group(['middleware' => 'jwt'], function()
 {
-    Route::get('/home', 'HomeController@index');
+    Route::get('/dashboard', 'dashboardController@index');
 });

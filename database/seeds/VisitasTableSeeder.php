@@ -12,8 +12,32 @@ class VisitasTableSeeder extends Seeder
      */
     public function run()
     {
-        Visitas::create([
-            'visitas' => 0
-        ]);
+        for($i = 0; $i <= 5; $i++):
+            Visitas::create([ 'created_at' => '2018-07-09 17:16:18' ]);
+        endfor;
+        
+        for($i = 0; $i <= 5; $i++):
+            Visitas::create([ 'created_at' => '2018-07-10 17:16:18' ]);
+        endfor;
+        
+        for($i = 0; $i <= 5; $i++):
+            Visitas::create([ 'created_at' => '2018-07-11 17:16:18' ]);
+        endfor;
+        
+        for($i = 0; $i <= 5; $i++):
+            Visitas::create([ 'created_at' => '2018-07-12 17:16:18' ]);
+        endfor;
+        
+        for($i = 0; $i <= 5; $i++):
+            Visitas::create([ 'created_at' => '2018-07-13 17:16:18' ]);
+        endfor;
+        
+        for($i = 0; $i <= 5; $i++):
+            Visitas::create([ 'created_at' => '2018-07-14 17:16:18' ]);
+        endfor;
+        
+        for($i = 0; $i <= 5; $i++):
+            Visitas::create([ 'created_at' => '2018-07-15 17:16:18' ]);
+        endfor;
     }
 }

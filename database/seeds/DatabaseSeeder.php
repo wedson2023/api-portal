@@ -20,5 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call(GaleriaTableSeeder::class);        
         $this->call(ContatoWebTableSeeder::class);        
         $this->call(BotoesTableSeeder::class);        
+        $this->call(EventosTableSeeder::class);        
     }
 }
