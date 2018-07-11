@@ -354,6 +354,16 @@ var navItems = [
         icon: 'icon-doc'
     },
     {
+        name: 'Contato',
+        url: '/contato',
+        icon: 'icon-phone'
+    },
+    {
+        name: 'Agenda de show',
+        url: '/agenda-de-show',
+        icon: 'icon-equalizer'
+    },
+    {
         title: true,
         name: 'Listas'
     },
@@ -386,7 +396,17 @@ var navItems = [
         name: 'Segmentos',
         url: '/listar-segmentos',
         icon: 'icon-tag'
-    }
+    },
+    {
+        name: 'Contato',
+        url: '/listar-contato',
+        icon: 'icon-phone'
+    },
+    {
+        name: 'Agenda de show',
+        url: '/listar-agenda-de-show',
+        icon: 'icon-equalizer'
+    },
 ];
 
 
@@ -645,7 +665,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header\r\n  [fixed]=\"true\"\r\n  [navbarBrandFull]=\"{src: 'assets/img/brand/logo.jpg', width: 70, height: 25, alt: 'CoreUI Logo'}\"\r\n  [navbarBrandMinimized]=\"{src: 'assets/img/brand/sygnet.jpg', width: 30, height: 30, alt: 'CoreUI Logo'}\"\r\n  [sidebarToggler]=\"'lg'\"\r\n  [asideMenuToggler]=\"'lg'\">\r\n  <ul class=\"nav navbar-nav d-md-down-none\">\r\n    <li class=\"nav-item px-3\">\r\n      <a class=\"nav-link\" routerLink=\"/dashboard\">Dashboard</a>\r\n    </li>\r\n    <li class=\"nav-item px-3\">\r\n      <a class=\"nav-link\" routerLink=\"/guia-comercial\">Guia comercial</a>\r\n    </li>\r\n    <li class=\"nav-item px-3\">\r\n      <a class=\"nav-link\" routerLink=\"/noticias\">Nóticias</a>\r\n    </li>\r\n  </ul>\r\n  <ul class=\"ml-auto\">\r\n    <!-- <li class=\"nav-item d-md-down-none\">\r\n      <a class=\"nav-link\" href=\"#\"><i class=\"icon-bell\"></i><span class=\"badge badge-pill badge-danger\">5</span></a>\r\n    </li>\r\n    <li class=\"nav-item d-md-down-none\">\r\n      <a class=\"nav-link\" href=\"#\"><i class=\"icon-list\"></i></a>\r\n    </li>\r\n    <li class=\"nav-item d-md-down-none\">\r\n      <a class=\"nav-link\" href=\"#\"><i class=\"icon-location-pin\"></i></a>\r\n    </li>\r\n    <li class=\"nav-item dropdown\" dropdown placement=\"bottom right\">\r\n      <a class=\"nav-link\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" dropdownToggle (click)=\"false\">\r\n        <img src=\"assets/img/avatars/6.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\"/>\r\n      </a>\r\n      <div class=\"dropdown-menu dropdown-menu-right\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\r\n        <div class=\"dropdown-header text-center\"><strong>Account</strong></div>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-bell-o\"></i> Updates<span class=\"badge badge-info\">42</span></a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-envelope-o\"></i> Messages<span class=\"badge badge-success\">42</span></a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-tasks\"></i> Tasks<span class=\"badge badge-danger\">42</span></a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-comments\"></i> Comment<span class=\"badge badge-warning\">42</span></a>\r\n        <div class=\"dropdown-header text-center\"><strong>Settings</strong></div>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-user\"></i> Profile</a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-wrench\"></i> Setting</a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-usd\"></i> Payments<span class=\"badge badge-dark\">42</span></a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-file\"></i> Projects<span class=\"badge badge-primary\">42</span></a>\r\n        <div class=\"divider\"></div>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-shield\"></i> Lock account</a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-lock\"></i> Logout</a>\r\n      </div>\r\n    </li> -->\r\n  </ul>\r\n</app-header>\r\n<div class=\"app-body\">\r\n  <app-sidebar [fixed]=\"true\" [display]=\"'lg'\">\r\n    <app-sidebar-nav [navItems]=\"navItems\" [perfectScrollbar] [disabled]=\"sidebarMinimized\"></app-sidebar-nav>\r\n    <app-sidebar-minimizer></app-sidebar-minimizer>\r\n  </app-sidebar>\r\n  <!-- Main content -->\r\n  <main class=\"main mt-4\">\r\n    <div class=\"container-fluid\">\r\n      <router-outlet></router-outlet>\r\n    </div><!-- /.container-fluid -->\r\n  </main>\r\n  <app-aside [fixed]=\"true\" [display]=\"false\">\r\n    <ul class=\"list-group\">\r\n        <a href=\"#\" class=\"list-group-item list-group-item-action\">Sair</a>\r\n    </ul>\r\n  </app-aside>\r\n</div>\r\n<app-footer>\r\n  <span><a href=\"http://portaldoguia.com.br\">Developer Wedson Santos</a> &copy; 2018 Criado.</span>\r\n  <span class=\"ml-auto\">Todos os direitos reservados <a href=\"http://portaldoguia.com.br\">Portal do guia</a></span>\r\n</app-footer>\r\n"
+module.exports = "<app-header\r\n  [fixed]=\"true\"\r\n  [navbarBrandFull]=\"{src: 'assets/img/brand/logo.jpg', width: 70, height: 25, alt: 'CoreUI Logo'}\"\r\n  [navbarBrandMinimized]=\"{src: 'assets/img/brand/sygnet.jpg', width: 30, height: 30, alt: 'CoreUI Logo'}\"\r\n  [sidebarToggler]=\"'lg'\"\r\n  [asideMenuToggler]=\"'lg'\">\r\n  <ul class=\"nav navbar-nav d-md-down-none\">\r\n    <li class=\"nav-item px-3\">\r\n      <a class=\"nav-link\" routerLink=\"/dashboard\">Dashboard</a>\r\n    </li>\r\n    <li class=\"nav-item px-3\">\r\n      <a class=\"nav-link\" routerLink=\"/guia-comercial\">Guia comercial</a>\r\n    </li>\r\n    <li class=\"nav-item px-3\">\r\n      <a class=\"nav-link\" routerLink=\"/noticias\">Nóticias</a>\r\n    </li>\r\n  </ul>\r\n  <ul class=\"ml-auto\">\r\n    <!-- <li class=\"nav-item d-md-down-none\">\r\n      <a class=\"nav-link\" href=\"#\"><i class=\"icon-bell\"></i><span class=\"badge badge-pill badge-danger\">5</span></a>\r\n    </li>\r\n    <li class=\"nav-item d-md-down-none\">\r\n      <a class=\"nav-link\" href=\"#\"><i class=\"icon-list\"></i></a>\r\n    </li>\r\n    <li class=\"nav-item d-md-down-none\">\r\n      <a class=\"nav-link\" href=\"#\"><i class=\"icon-location-pin\"></i></a>\r\n    </li>\r\n    <li class=\"nav-item dropdown\" dropdown placement=\"bottom right\">\r\n      <a class=\"nav-link\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" dropdownToggle (click)=\"false\">\r\n        <img src=\"assets/img/avatars/6.jpg\" class=\"img-avatar\" alt=\"admin@bootstrapmaster.com\"/>\r\n      </a>\r\n      <div class=\"dropdown-menu dropdown-menu-right\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\r\n        <div class=\"dropdown-header text-center\"><strong>Account</strong></div>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-bell-o\"></i> Updates<span class=\"badge badge-info\">42</span></a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-envelope-o\"></i> Messages<span class=\"badge badge-success\">42</span></a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-tasks\"></i> Tasks<span class=\"badge badge-danger\">42</span></a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-comments\"></i> Comment<span class=\"badge badge-warning\">42</span></a>\r\n        <div class=\"dropdown-header text-center\"><strong>Settings</strong></div>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-user\"></i> Profile</a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-wrench\"></i> Setting</a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-usd\"></i> Payments<span class=\"badge badge-dark\">42</span></a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-file\"></i> Projects<span class=\"badge badge-primary\">42</span></a>\r\n        <div class=\"divider\"></div>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-shield\"></i> Lock account</a>\r\n        <a class=\"dropdown-item\" href=\"#\"><i class=\"fa fa-lock\"></i> Logout</a>\r\n      </div>\r\n    </li> -->\r\n  </ul>\r\n</app-header>\r\n<div class=\"app-body\">\r\n  <app-sidebar [fixed]=\"true\" [display]=\"'lg'\">\r\n    <app-sidebar-nav [navItems]=\"navItems\" [perfectScrollbar] [disabled]=\"sidebarMinimized\"></app-sidebar-nav>\r\n    <app-sidebar-minimizer></app-sidebar-minimizer>\r\n  </app-sidebar>\r\n  <!-- Main content -->\r\n  <main class=\"main mt-4\">\r\n    <div class=\"container-fluid\">\r\n      <router-outlet></router-outlet>\r\n    </div><!-- /.container-fluid -->\r\n  </main>\r\n  <app-aside [fixed]=\"true\" [display]=\"false\">\r\n    <ul class=\"list-group\">\r\n        <a href=\"javascript:void(0)\" (click)=\"logout()\" class=\"list-group-item list-group-item-action\">Sair</a>\r\n    </ul>\r\n  </app-aside>\r\n</div>\r\n<app-footer>\r\n  <span><a href=\"http://portaldoguia.com.br\">Developer Wedson Santos</a> &copy; 2018 Criado.</span>\r\n  <span class=\"ml-auto\">Todos os direitos reservados <a href=\"http://portaldoguia.com.br\">Portal do guia</a></span>\r\n</app-footer>\r\n"
 
 /***/ }),
 
@@ -659,8 +679,10 @@ module.exports = "<app-header\r\n  [fixed]=\"true\"\r\n  [navbarBrandFull]=\"{sr
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DefaultLayoutComponent", function() { return DefaultLayoutComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../_nav */ "./src/app/_nav.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../_nav */ "./src/app/_nav.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -672,10 +694,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
+
 var DefaultLayoutComponent = /** @class */ (function () {
-    function DefaultLayoutComponent() {
+    function DefaultLayoutComponent(http, router) {
         var _this = this;
-        this.navItems = _nav__WEBPACK_IMPORTED_MODULE_1__["navItems"];
+        this.http = http;
+        this.router = router;
+        this.navItems = _nav__WEBPACK_IMPORTED_MODULE_3__["navItems"];
         this.sidebarMinimized = true;
         this.element = document.body;
         this.changes = new MutationObserver(function (mutations) {
@@ -685,12 +711,19 @@ var DefaultLayoutComponent = /** @class */ (function () {
             attributes: true
         });
     }
+    DefaultLayoutComponent.prototype.logout = function () {
+        var _this = this;
+        this.http.getApiGet('logout').subscribe(function (response) {
+            _this.router.navigate(['']);
+        });
+    };
     DefaultLayoutComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-dashboard',
             template: __webpack_require__(/*! ./default-layout.component.html */ "./src/app/containers/default-layout/default-layout.component.html")
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"]])
     ], DefaultLayoutComponent);
     return DefaultLayoutComponent;
 }());
@@ -1227,7 +1260,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeIn\">\n    <div class=\"card card-default\">\n      <div class=\"card-header\">\n        <i class=\"icon-envelope-letter\"></i>Cadastro notícias\n      </div>\n      <div class=\"card-body\">\n\n      </div>\n    </div>\n  </div>\n"
+module.exports = "<div class=\"animated fadeIn\">\n    <div class=\"card card-default\">\n      <div class=\"card-header\">\n        <i class=\"icon-envelope-letter\"></i>Cadastro notícias\n      </div>\n      <div class=\"card-body\">\n        <form action=\"\">\n          <div class=\"row\">\n            <div class=\"col\">\n              <div class=\"form-group\">\n                <label for=\"fonte\">Fonte</label>\n                <input required type=\"text\" class=\"form-control\" id=\"fonte\" placeholder=\"Fonte da notícia\">\n              </div>\n            </div>\n            <div class=\"col\">\n              <div class=\"form-group\">\n                <label for=\"capa\">Capa</label>\n                <input required type=\"file\" style=\"padding: 3px 0.75rem !important;\" class=\"form-control\" id=\"capa\">\n              </div>\n            </div>\n          </div> <!-- fim row -->\n          <div class=\"row\">\n            <div class=\"col\">\n              <div class=\"form-group\" >\n                <label for=\"titulo\">Título</label>\n                <input required type=\"text\" class=\"form-control\" id=\"titulo\" placeholder=\"Título da notícia\">\n              </div>\n            </div>\n            <div class=\"col\">\n              <div class=\"form-group\">\n                <label for=\"subtitulo\">Subtitulo</label>\n                <input required type=\"text\" class=\"form-control\" id=\"subtitulo\" placeholder=\"Subtítulo da notícia\">\n              </div>\n            </div>\n          </div> <!-- fim row -->\n          <div class=\"row\">\n            <div class=\"col\">\n              <div class=\"form-group\">\n                <label for=\"ativo\">Ativo</label>\n                <div class=\"input-group mb-3\">\n                  <div class=\"input-group-prepend\">\n                    <label class=\"input-group-text\" for=\"ativo\">Opções</label>\n                  </div>\n                  <select required class=\"custom-select\" id=\"ativo\">\n                    <option value=\"\">Selecione um item</option>\n                    <option selected value=\"1\">Ativo</option>\n                    <option value=\"0\">Inativo</option>\n                  </select>\n                </div>\n              </div>\n            </div>\n            <div class=\"col\">\n              <div class=\"form-group\">\n                <label for=\"destaque\">Destaque</label>\n                <div class=\"input-group mb-3\">\n                  <div class=\"input-group-prepend\">\n                    <label class=\"input-group-text\" for=\"destaque\">Opções</label>\n                  </div>\n                  <select required class=\"custom-select\" id=\"destaque\">\n                    <option value=\"\">Selecione um item</option>\n                    <option value=\"1\">Sim</option>\n                    <option selected value=\"0\">Não</option>\n                  </select>\n                </div>\n              </div>\n            </div>\n          </div> <!-- fim row -->\n          <div class=\"row\">\n            <div class=\"col\">\n              <textarea id=\"editor\"></textarea>\n            </div>\n          </div>\n          <div class=\"row mt-3\">\n            <div class=\"col\">\n              <div class=\"row\">\n                <div class=\"col\">\n                  <button type=\"button\" type=\"submit\" class=\"btn btn-primary rounded-0 mr-1\">Cadastrar</button>\n                  <button type=\"button\" type=\"reset\" class=\"btn btn-secondary rounded-0\">Limpar</button>\n                </div>\n              </div>\n            </div>\n            <div class=\"col\"></div>\n          </div> <!-- fim row -->\n        </form>\n      </div>\n    </div>\n  </div>\n"
 
 /***/ }),
 

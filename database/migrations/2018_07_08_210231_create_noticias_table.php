@@ -18,9 +18,9 @@ class CreateNoticiasTable extends Migration
             $table->string('fonte', 250);
             $table->string('titulo', 250);
             $table->string('subtitulo', 250)->nullable();
-            $table->text('template', 5000);
+            $table->text('template', 10000);
             $table->string('capa', 250)->nullable();
-            $table->integer('visitas');
+            $table->integer('visitas')->nullable();
             $table->boolean('destaque')->default(false);
             $table->boolean('ativo')->default(true);
             $table->timestamps();

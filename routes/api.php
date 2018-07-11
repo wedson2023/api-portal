@@ -21,5 +21,5 @@ Route::get('/dashboard', 'dashboardController@index');
 
 Route::group(['middleware' => 'jwt'], function()
 {
-    
+   Route::post('/noticias/cadastro', 'NoticiasController@cadastro'); 
 });
