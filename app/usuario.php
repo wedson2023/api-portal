@@ -9,5 +9,5 @@ class usuario extends Authenticatable
 {
     protected $table = 'usuarios';
     protected $fillable = ['id', 'nome', 'created_at'];
-    protected $hidden = ['senha', 'updated_at'];
+    protected $hidden = ['password', 'updated_at'];
 }

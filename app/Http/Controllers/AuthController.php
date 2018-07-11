@@ -6,17 +6,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Usuario;
 use \Firebase\JWT\JWT;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {    
     public function login(Request $request) { 
     
         $nome = $request->input('nome');
-        $senha = $request->input('senha');
+        $password = $request->input('password');
 
         $usuario = Usuario::where('nome', '=', $nome)->first();
 
-        if(!$usuario || !Hash::check($senha, $usuario->senha)) 
+        if(!$usuario || !Hash::check($password, $usuario->password)) 
             return response()->json(['resposta' => 'Usuário ou senha incorretos.'], 401);
         
         $key = 'portaldoguia';
@@ -26,13 +28,22 @@ class AuthController extends Controller
             "id" => $usuario->id
         ];
         
+        Auth::attempt(['nome' => $usuario->nome, 'password' => $password]);
+        Auth::login($usuario);      
+        
         $token = JWT::encode($param, $key);       
         
         return compact('token', 'usuario');
     }
     
+    public function validarSessao(){
+        $resposta = true;//Auth::check();
+        return compact('resposta');                
+    }
+    
     public function logOut() {
-        Session::flush();
-        return response()->json(['resposta' => true]);
+        Auth::logout();
+        $resposta = !Auth::check();
+        return compact('resposta');
     }
 }

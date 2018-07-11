@@ -13,8 +13,13 @@
 
 Route::post('/login', 'AuthController@login');
 Route::get('/logout', 'AuthController@logOut');
+Route::get('/validar-sessao', 'AuthController@validarSessao');
+
+/** PÁGINAS **/
+
+Route::get('/dashboard', 'dashboardController@index');
 
 Route::group(['middleware' => 'jwt'], function()
 {
-    Route::get('/dashboard', 'dashboardController@index');
+    
 });

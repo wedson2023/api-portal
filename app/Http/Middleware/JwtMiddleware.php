@@ -18,10 +18,17 @@ class JwtMiddleware
         if(!$request->hasHeader('Authorization'))
             return response('Token não informado', 401);
         
-        $bearer = $request->header('Authorization');
+        $token = $request->header('Authorization');
         
-        if(is_null($bearer) || strlen($bearer)==0 || $bearer == 'Bearer null' || $bearer == 'Bearer true')
-            return response('Token inválido', 401);
+        if(is_null($token) || strlen($token) == 0 || $token == 'null' || $token == '')
+            return response('Token inválido', 401);        
+       
+        try {
+            $key = 'portaldoguia';
+            $decoded = JWT::decode($token, $key, array('HS256'));
+        } catch (\Exception $e) { 
+            return compact('e');
+        }
         
         return $next($request);
     }
