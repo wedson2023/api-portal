@@ -15,8 +15,8 @@ class CreateContatoWebsTable extends Migration
     {
         Schema::create('contato_webs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome')->nullable();
             $table->string('url')->nullable();
+            $table->string('nome')->nullable();
             $table->integer('guia_id')->unsigned();
             $table->foreign('guia_id')->references('id')->on('guia_comercials')->onDelete('cascade');
             $table->timestamps();

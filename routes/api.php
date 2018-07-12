@@ -22,4 +22,7 @@ Route::get('/dashboard', 'dashboardController@index');
 Route::group(['middleware' => 'jwt'], function()
 {
    Route::post('/noticias/cadastro', 'NoticiasController@cadastro'); 
+   
+   Route::get('/guia-comercial/listar', 'GuiaComercialController@listar'); 
+   Route::post('/guia-comercial/cadastro', 'GuiaComercialController@cadastro'); 
 });

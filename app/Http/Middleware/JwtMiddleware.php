@@ -23,12 +23,8 @@ class JwtMiddleware
         if(is_null($token) || strlen($token) == 0 || $token == 'null' || $token == '')
             return response('Token inválido', 401);        
        
-//        try {;
-//            $key = 'portaldoguia';
-//            $decoded = JWT::decode($token, $key, array('HS256'));
-//        } catch (\Exception $e) { 
-//            return compact('e');
-//        }
+        $key = 'portaldoguia';
+        $decoded = JWT::decode($token, $key, array('HS256'));
         
         return $next($request);
     }

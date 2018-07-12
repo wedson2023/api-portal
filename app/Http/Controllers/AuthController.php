@@ -37,7 +37,7 @@ class AuthController extends Controller
     }
     
     public function validarSessao(){
-        $resposta = true;//Auth::check();
+        $resposta = Auth::check();
         return compact('resposta');                
     }
     
