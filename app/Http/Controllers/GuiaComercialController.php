@@ -13,13 +13,19 @@ class GuiaComercialController extends UploadController
         $resposta->contato = $resposta->contato;
         return compact('resposta');
     }
+    
     public function listar() {
         $registros = guiaComercial::Paginate(10);
         return compact('registros');
     }
     
     public function deletar(Request $request){
-        $reposta = guiaComercial::destroy($request->input('id'));
+        $resposta = guiaComercial::find($request->input('id'));        
+        if(!is_null($resposta->capa)):
+            unlink('uploads/guiaComercial/' . $resposta->capa);    
+        endif; 
+        
+        $resposta = guiaComercial::destroy($request->input('id'));
         return compact('resposta');
     }
     

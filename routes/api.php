@@ -21,8 +21,8 @@ Route::get('/dashboard', 'dashboardController@index');
 
 Route::group(['middleware' => 'jwt'], function()
 {
-   Route::post('/noticias/listar', 'NoticiasController@listar'); 
-   Route::post('/noticias/listar/{id}', 'NoticiasController@noticia'); 
+   Route::get('/noticias/listar', 'NoticiasController@listar'); 
+   Route::get('/noticias/listar/{id}', 'NoticiasController@noticia'); 
    Route::post('/noticias/cadastro', 'NoticiasController@cadastro'); 
    Route::post('/noticias/editar', 'NoticiasController@editar'); 
    Route::post('/noticias/deletar', 'NoticiasController@deletar'); 
