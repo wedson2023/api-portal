@@ -13,37 +13,37 @@ class ContatoWebTableSeeder extends Seeder
     public function run()
     {
         Contato_web::create([
-            'nome' => 'portaldoguia@hotmail.com',      
+            'nome' => 'site',      
             'url' => 'http://portaldoguia.com.br/',
             'guia_id' => 1
         ]);
         
         Contato_web::create([
-            'nome' => 'portaldoguia@hotmail.com',      
-            'url' => 'http://portaldoguia.com.br/',
+            'nome' => 'email',      
+            'url' => 'portaldoguia@hotmail.com',
             'guia_id' => 1
         ]);
         
         Contato_web::create([
-            'nome' => 'www.facebook.com/maranataespetos',      
+            'nome' => 'facebook',      
             'url' => 'http://facebook.com/maranataespetos',
             'guia_id' => 1
         ]);
         
         Contato_web::create([
-            'nome' => 'portaldoguia@hotmail.com',      
+            'nome' => 'site',      
             'url' => 'http://portaldoguia.com.br/',
             'guia_id' => 2
         ]);
         
         Contato_web::create([
-            'nome' => 'portaldoguia@hotmail.com',      
-            'url' => 'http://portaldoguia.com.br/',
+            'nome' => 'email',      
+            'url' => 'portaldoguia@hotmail.com',
             'guia_id' => 2
         ]);
         
         Contato_web::create([
-            'nome' => 'www.facebook.com/maranataespetos',      
+            'nome' => 'facebook',      
             'url' => 'http://facebook.com/maranataespetos',
             'guia_id' => 2
         ]);

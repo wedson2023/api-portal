@@ -21,8 +21,15 @@ Route::get('/dashboard', 'dashboardController@index');
 
 Route::group(['middleware' => 'jwt'], function()
 {
+   Route::post('/noticias/listar', 'NoticiasController@listar'); 
+   Route::post('/noticias/listar/{id}', 'NoticiasController@noticia'); 
    Route::post('/noticias/cadastro', 'NoticiasController@cadastro'); 
+   Route::post('/noticias/editar', 'NoticiasController@editar'); 
+   Route::post('/noticias/deletar', 'NoticiasController@deletar'); 
    
    Route::get('/guia-comercial/listar', 'GuiaComercialController@listar'); 
+   Route::get('/guia-comercial/listar/{id}', 'GuiaComercialController@empresa'); 
    Route::post('/guia-comercial/cadastro', 'GuiaComercialController@cadastro'); 
+   Route::post('/guia-comercial/editar', 'GuiaComercialController@editar'); 
+   Route::post('/guia-comercial/deletar', 'GuiaComercialController@deletar'); 
 });
