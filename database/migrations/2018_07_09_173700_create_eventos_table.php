@@ -18,6 +18,9 @@ class CreateEventosTable extends Migration
             $table->string('nome')->nullable();
             $table->string('local');
             $table->dateTime('data');
+            $table->string('informacoes')->nullable();
+            $table->string('cartaz')->nullable();
+            $table->string('site')->nullable();
             $table->integer('categoria_id')->unsigned();
             $table->foreign('categoria_id')->references('id')->on('categorias');
             $table->timestamps();

@@ -13,14 +13,14 @@
 
 Route::post('/login', 'AuthController@login');
 Route::get('/logout', 'AuthController@logOut');
-Route::get('/validar-sessao', 'AuthController@validarSessao');
+//Route::get('/validar-sessao', 'AuthController@validarSessao');
 
 /** PÁGINAS **/
 
-Route::get('/dashboard', 'dashboardController@index');
-
 Route::group(['middleware' => 'jwt'], function()
 {
+   Route::get('/dashboard', 'dashboardController@index');
+   
    Route::get('/noticias/listar', 'NoticiasController@listar'); 
    Route::get('/noticias/listar/{id}', 'NoticiasController@noticia'); 
    Route::post('/noticias/cadastro', 'NoticiasController@cadastro'); 

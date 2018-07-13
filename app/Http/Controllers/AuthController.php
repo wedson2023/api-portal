@@ -36,10 +36,10 @@ class AuthController extends Controller
         return compact('token', 'usuario');
     }
     
-    public function validarSessao(){
-        $resposta = Auth::check();
-        return compact('resposta');                
-    }
+//    public function validarSessao(){
+//        $resposta = Auth::check();
+//        return compact('resposta');                
+//    }
     
     public function logOut() {
         Auth::logout();
