@@ -32,4 +32,8 @@ Route::group(['middleware' => 'jwt'], function()
    Route::post('/guia-comercial/cadastro', 'GuiaComercialController@cadastro'); 
    Route::post('/guia-comercial/editar', 'GuiaComercialController@editar'); 
    Route::post('/guia-comercial/deletar', 'GuiaComercialController@deletar'); 
+   
+   Route::get('/botoes/listar', 'BotoesController@listar');
+   Route::post('/botoes/cadastro', 'BotoesController@cadastro');
+   Route::post('/botoes/deletar', 'BotoesController@deletar');
 });
