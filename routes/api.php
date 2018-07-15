@@ -44,5 +44,8 @@ Route::group(['middleware' => 'jwt'], function()
    Route::post('/eventos/deletar', 'EventosController@deletar');
    
    Route::get('/categorias/listar', 'CategoriasController@listar');
+   Route::get('/categorias/listar-todos', 'CategoriasController@listarTodos');
+   Route::post('/categorias/cadastro', 'CategoriasController@cadastro');
+   Route::post('/categorias/deletar', 'CategoriasController@deletar');
    
 });

@@ -12,5 +12,24 @@ class CategoriasController extends Controller
         return compact('resposta');
     }
     
+    public function listarTodos() {
+        $registros = categorias::Paginate(10);
+        return compact('registros');
+    }
+    
+    public function deletar(Request $request){        
+        $resposta = categorias::destroy($request->input('id'));
+        return compact('resposta');
+    }
+    
+    public function cadastro(Request $request){
+        
+        $resposta = new categorias;        
+        $resposta->nome = $request->input('nome');        
+        $resposta->save();
+        
+        return compact('resposta');
+    }
+    
     
 }
