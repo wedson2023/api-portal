@@ -46,6 +46,8 @@ class GuiaComercialController extends UploadController
         $resposta->endereco = $request->input('endereco');
         $resposta->telefones = $request->input('telefones');
         $resposta->horario = $request->input('horario');
+        $resposta->cidade = $request->input('cidade');
+        $resposta->segmento_id = $request->input('segmento_id');
         $resposta->formas_pagamento = $request->input('formas_pagamento');
         $resposta->template = $request->input('template');
         $resposta->ativo = $request->input('ativo'); 
@@ -73,6 +75,8 @@ class GuiaComercialController extends UploadController
         $resposta->endereco = $request->input('endereco');
         $resposta->telefones = $request->input('telefones');
         $resposta->horario = $request->input('horario');
+        $resposta->cidade = $request->input('cidade');
+        $resposta->segmento_id = $request->input('segmento_id');
         $resposta->formas_pagamento = $request->input('formas_pagamento');
         $resposta->template = $request->input('template');
         $resposta->ativo = $request->input('ativo'); 

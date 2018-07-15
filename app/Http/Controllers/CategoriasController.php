@@ -24,12 +24,15 @@ class CategoriasController extends Controller
     
     public function cadastro(Request $request){
         
-        $resposta = new categorias;        
+        $verifica = categorias::where('nome', '=', $request->input('nome'))->count();  
+        if($verifica)   
+            return response()->json(['resposta' => 'Já existe essa categorias.'], 401);
+            
+        $resposta = new categorias;
         $resposta->nome = $request->input('nome');        
         $resposta->save();
         
         return compact('resposta');
     }
-    
     
 }
