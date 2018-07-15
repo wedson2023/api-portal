@@ -36,4 +36,13 @@ Route::group(['middleware' => 'jwt'], function()
    Route::get('/botoes/listar', 'BotoesController@listar');
    Route::post('/botoes/cadastro', 'BotoesController@cadastro');
    Route::post('/botoes/deletar', 'BotoesController@deletar');
+   
+   Route::get('/eventos/listar', 'EventosController@listar');
+   Route::get('/eventos/listar/{id}', 'EventosController@evento');
+   Route::post('/eventos/cadastro', 'EventosController@cadastro');
+   Route::post('/eventos/editar', 'EventosController@editar');
+   Route::post('/eventos/deletar', 'EventosController@deletar');
+   
+   Route::get('/categorias/listar', 'CategoriasController@listar');
+   
 });
