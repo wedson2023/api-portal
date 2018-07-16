@@ -21,7 +21,7 @@ class CreateGuiaComercialsTable extends Migration
             $table->string('telefones', 250)->nullable();
             $table->string('horario', 250)->nullable();
             $table->string('cidade', 250)->nullable();
-            //$table->integer('segmento_id')->unsigned();
+            $table->integer('segmento_id')->unsigned();
             //$table->foreign('segmento_id')->references('id')->on('segmentos');
             $table->string('formas_pagamento', 250)->nullable();
             $table->text('template', 5000)->nullable();

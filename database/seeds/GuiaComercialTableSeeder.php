@@ -19,7 +19,7 @@ class GuiaComercialTableSeeder extends Seeder
             'horario' => 'De segunda a sexta de 13 as 23 horas',
             'formas_pagamento' => null,
             'cidade' => 'Agrestina',
-            //'segmento' => 1,
+            'segmento_id' => 1,
             'template' => 'Há mais de 3 anos no mercado Maranata Fabrica de Espetos, produzindo produtos sempre fresquinhos para seu churrasco.'            
         ]);
         
@@ -30,7 +30,7 @@ class GuiaComercialTableSeeder extends Seeder
             'horario' => 'De segunda a sexta de 13 as 23 horas',
             'formas_pagamento' => null,
             'cidade' => 'Agrestina',
-            //'segmento' => 2,
+            'segmento_id' => 2,
             'template' => 'Há mais de 3 anos no mercado Maranata Fabrica de Espetos, produzindo produtos sempre fresquinhos para seu churrasco.'            
         ]);
     }

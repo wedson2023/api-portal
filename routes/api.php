@@ -53,4 +53,8 @@ Route::group(['middleware' => 'jwt'], function()
    Route::post('/segmentos/cadastro', 'SegmentosController@cadastro');
    Route::post('/segmentos/deletar', 'SegmentosController@deletar');
    
+   Route::get('/banner/listar-todos', 'BannerController@listarTodos');
+   Route::post('/banner/cadastro', 'BannerController@cadastro');
+   Route::post('/banner/deletar', 'BannerController@deletar');
+   
 });
