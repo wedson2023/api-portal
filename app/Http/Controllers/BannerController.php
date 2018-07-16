@@ -28,12 +28,41 @@ class BannerController extends UploadController
         
         if(isset($_FILES['imagem'])):
             $file = $_FILES['imagem']; 
-            $imagem = UploadController::UploadImage($file, 'uploads/banner/', 300);
+            $imagem = UploadController::UploadImage($file, 'uploads/banner/', 700);
             $resposta->imagem = $imagem;
         endif;
         
         $resposta->tamanho = $request->input('tamanho');        
         $resposta->save();
+        
+        return compact('resposta');
+    }
+    
+    // FUNÇÕES SITE
+    
+    public function listarBanner() {
+        $resposta = [
+                    '600x100' => banner::where('tamanho', '=', '600x100')->orderByRaw("rand()")->get()->transform(function($item, $key){
+                        return [
+                            'imagem' => url('uploads/banner/' . $item->imagem)
+                        ];
+                    }),
+                    '300x250' => banner::where('tamanho', '=', '300x250')->orderByRaw("rand()")->get()->transform(function($item, $key){
+                        return [
+                            'imagem' => url('uploads/banner/' . $item->imagem)
+                        ];
+                    }),
+                    '300x350' => banner::where('tamanho', '=', '300x350')->orderByRaw("rand()")->get()->transform(function($item, $key){
+                        return [
+                            'imagem' => url('uploads/banner/' . $item->imagem)
+                        ];
+                    }),
+                    '300x100' => banner::where('tamanho', '=', '300x100')->orderByRaw("rand()")->get()->transform(function($item, $key){
+                        return [
+                            'imagem' => url('uploads/banner/' . $item->imagem)
+                        ];
+                    })
+                ];
         
         return compact('resposta');
     }

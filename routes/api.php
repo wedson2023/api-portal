@@ -17,6 +17,8 @@ Route::get('/logout', 'AuthController@logOut');
 
 /** PÁGINAS **/
 
+Route::get('/banner', 'BannerController@listarBanner');
+
 Route::group(['middleware' => 'jwt'], function()
 {
    Route::get('/dashboard', 'dashboardController@index');
