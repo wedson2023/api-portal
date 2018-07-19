@@ -38,15 +38,16 @@ class NoticiasController extends UploadController
                 unlink('uploads/noticias/' . $resposta->capa);    
             endif;
             $file = $_FILES['capa']; 
-            $capa = UploadController::UploadImage($file, 'uploads/noticias/', 300);
+            $capa = UploadController::UploadImage($file, 'uploads/noticias/', 700);
             $resposta->capa = $capa;
         endif;
         
         $resposta = noticias::where('id', '=', $request->input('id'))->update([
-            'capa' => $capa,
+            'capa' => isset($capa) ? $capa : $resposta->capa,
             'fonte' => $request->input('fonte'),
             'titulo' => $request->input('titulo'),
             'subtitulo' => $request->input('subtitulo'),
+            'categoria' => $request->input('categoria'),
             'destaque' => $request->input('destaque'),
             'ativo' => $request->input('ativo'),
             'template' => $request->input('template')
@@ -58,17 +59,56 @@ class NoticiasController extends UploadController
     public function cadastro(Request $request){
         
         $file = $_FILES['capa'];        
-        $capa = UploadController::UploadImage($file, 'uploads/noticias/', 300);
+        $capa = UploadController::UploadImage($file, 'uploads/noticias/', 700);
         $resposta = noticias::insert([
             'capa' => $capa,
             'fonte' => $request->input('fonte'),
             'titulo' => $request->input('titulo'),
             'subtitulo' => $request->input('subtitulo'),
+            'categoria' => $request->input('categoria'),
             'destaque' => $request->input('destaque'),
             'ativo' => $request->input('ativo'),
             'template' => $request->input('template')
         ]);
         
+        return compact('resposta');
+    }
+
+    // site
+
+    public function listarHome(){
+
+        $resposta = [ 
+            'noticias' => noticias::where('destaque', '=', 0, 'and')->where('ativo', '=', 1)->orderBy('id', 'desc')->limit(7)->get()->transform(function($item, $key){
+                return [
+                    'id' => $item->id,
+                    'titulo' => substr($item->titulo, 0, 80),
+                    'fonte' => substr($item->fonte, 0, 20),
+                    'subtitulo' => substr($item->subtitulo, 0, 135),
+                    'capa' => url('uploads/noticias/' . $item->capa),
+                    'url' => urlencode($item->titulo)
+                ];
+            }),
+            'destaque' => noticias::where('destaque', '=', 1, 'and')->where('ativo', '=', 1)->orderBy('id', 'desc')->limit(1)->get()->transform(function($item, $key){
+                return [
+                    'id' => $item->id,
+                    'titulo' => substr($item->titulo, 0, 80),
+                    'fonte' => substr($item->fonte, 0, 20),
+                    'subtitulo' => substr($item->subtitulo, 0, 135),
+                    'capa' => url('uploads/noticias/' . $item->capa),
+                    'url' => urlencode($item->titulo)
+                ];
+            })[0]
+        ];
+
+        return compact('resposta');
+    }
+
+    public function mostrar($url){
+
+        $url = urldecode($url);
+        $resposta = noticias::select('template')->where('titulo', '=', $url)->first();
+
         return compact('resposta');
     }
 }

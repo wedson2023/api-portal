@@ -19,6 +19,11 @@ Route::get('/logout', 'AuthController@logOut');
 
 Route::get('/banner', 'BannerController@listarBanner');
 
+// noticias
+
+Route::get('/noticias/home/listar', 'NoticiasController@listarHome');
+Route::get('/noticias/mostrar/{url}', 'NoticiasController@mostrar');
+
 Route::group(['middleware' => 'jwt'], function()
 {
    Route::get('/dashboard', 'dashboardController@index');
