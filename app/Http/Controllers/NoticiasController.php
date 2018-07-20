@@ -83,7 +83,7 @@ class NoticiasController extends UploadController
                 return [
                     'id' => $item->id,
                     'titulo' => substr($item->titulo, 0, 80),
-                    'fonte' => substr($item->fonte, 0, 20),
+                    'categoria' => substr($item->categoria, 0, 20),
                     'subtitulo' => substr($item->subtitulo, 0, 135),
                     'capa' => url('uploads/noticias/' . $item->capa),
                     'url' => urlencode($item->titulo)
@@ -93,7 +93,7 @@ class NoticiasController extends UploadController
                 return [
                     'id' => $item->id,
                     'titulo' => substr($item->titulo, 0, 80),
-                    'fonte' => substr($item->fonte, 0, 20),
+                    'categoria' => substr($item->categoria, 0, 20),
                     'subtitulo' => substr($item->subtitulo, 0, 135),
                     'capa' => url('uploads/noticias/' . $item->capa),
                     'url' => urlencode($item->titulo)
@@ -107,8 +107,18 @@ class NoticiasController extends UploadController
     public function mostrar($url){
 
         $url = urldecode($url);
-        $resposta = noticias::select('template')->where('titulo', '=', $url)->first();
+        $resposta = noticias::select('template', 'categoria')->where('titulo', '=', $url)->first();
+        $relacionados = noticias::where('categoria', '=', $resposta->categoria, 'and')->where('ativo', '=', 1)->orderByRaw('rand()')->limit(4)->get()->transform(function($item, $key){
+                return [
+                    'id' => $item->id,
+                    'titulo' => substr($item->titulo, 0, 80),
+                    'categoria' => substr($item->categoria, 0, 20),
+                    'subtitulo' => substr($item->subtitulo, 0, 135),
+                    'capa' => url('uploads/noticias/' . $item->capa),
+                    'url' => urlencode($item->titulo)
+                ];
+            });
 
-        return compact('resposta');
+        return compact('resposta', 'relacionados');
     }
 }
