@@ -1192,8 +1192,8 @@ var QuemSomosComponent = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
-    api: 'http://portaldoguia.com.br/api/',
-    production: true
+    api: 'http://portal.test/api/',
+    production: false
 };
 
 
