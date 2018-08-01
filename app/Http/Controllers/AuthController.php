@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\Usuario;
+use App\usuario;
 use \Firebase\JWT\JWT;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -16,7 +16,7 @@ class AuthController extends Controller
         $nome = $request->input('nome');
         $password = $request->input('password');
 
-        $usuario = Usuario::where('nome', '=', $nome)->first();
+        $usuario = usuario::where('nome', '=', $nome)->first();
 
         if(!$usuario || !Hash::check($password, $usuario->password)) 
             return response()->json(['resposta' => 'Usuário ou senha incorretos.'], 401);
@@ -42,8 +42,8 @@ class AuthController extends Controller
 //    }
     
     public function logOut() {
-        Auth::logout();
-        $resposta = !Auth::check();
+        //Auth::logout();
+        $resposta = Auth::check();
         return compact('resposta');
     }
 }

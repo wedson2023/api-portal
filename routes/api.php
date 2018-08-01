@@ -19,14 +19,21 @@ Route::get('/logout', 'AuthController@logOut');
 
 Route::get('/banner', 'BannerController@listarBanner');
 
+// guia comercial
+
+Route::get('/guia-comercial/page/quantidade', 'GuiaComercialController@quantidade');
+Route::get('/guia-comercial/page/segmentos', 'GuiaComercialController@listarSegmentos');
+Route::get('/guia-comercial/page/{pagina}/{segmento}/{cidade}/{categoria}', 'GuiaComercialController@listarEmpresas');
+//Route::get('/guia-comercial/mostrar/{url}', 'NoticiasController@mostrar');
+
 // noticias
 
 Route::get('/noticias/home/listar', 'NoticiasController@listarHome');
-Route::get('/noticias/mostrar/{url}', 'NoticiasController@mostrar');
+Route::get('/segmentos/listar', 'SegmentosController@listar');
 
 Route::group(['middleware' => 'jwt'], function()
 {
-   Route::get('/dashboard', 'dashboardController@index');
+   Route::get('/dashboard', 'DashboardController@index');
    
    Route::get('/noticias/listar', 'NoticiasController@listar'); 
    Route::get('/noticias/listar/{id}', 'NoticiasController@noticia'); 
@@ -55,7 +62,6 @@ Route::group(['middleware' => 'jwt'], function()
    Route::post('/categorias/cadastro', 'CategoriasController@cadastro');
    Route::post('/categorias/deletar', 'CategoriasController@deletar');
    
-   Route::get('/segmentos/listar', 'SegmentosController@listar');
    Route::get('/segmentos/listar-todos', 'SegmentosController@listarTodos');
    Route::post('/segmentos/cadastro', 'SegmentosController@cadastro');
    Route::post('/segmentos/deletar', 'SegmentosController@deletar');

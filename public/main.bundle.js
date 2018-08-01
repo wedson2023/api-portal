@@ -185,8 +185,8 @@ var AppRoutingModule = /** @class */ (function () {
     }
     AppRoutingModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_10__angular_core__["I" /* NgModule */])({
-            imports: [__WEBPACK_IMPORTED_MODULE_11__angular_router__["b" /* RouterModule */].forRoot(routes)],
-            exports: [__WEBPACK_IMPORTED_MODULE_11__angular_router__["b" /* RouterModule */]]
+            imports: [__WEBPACK_IMPORTED_MODULE_11__angular_router__["c" /* RouterModule */].forRoot(routes)],
+            exports: [__WEBPACK_IMPORTED_MODULE_11__angular_router__["c" /* RouterModule */]]
         })
     ], AppRoutingModule);
     return AppRoutingModule;
@@ -273,21 +273,22 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_progressbar__ = __webpack_require__("./node_modules/ng2-progressbar/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__http_service__ = __webpack_require__("./src/app/http.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_routing_module__ = __webpack_require__("./src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__banner_slide_banner_slide_component__ = __webpack_require__("./src/app/banner-slide/banner-slide.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__header_header_component__ = __webpack_require__("./src/app/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__footer_footer_component__ = __webpack_require__("./src/app/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__quem_somos_quem_somos_component__ = __webpack_require__("./src/app/quem-somos/quem-somos.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__noticias_noticias_component__ = __webpack_require__("./src/app/noticias/noticias.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__agenda_de_eventos_agenda_de_eventos_component__ = __webpack_require__("./src/app/agenda-de-eventos/agenda-de-eventos.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__guia_comercial_guia_comercial_component__ = __webpack_require__("./src/app/guia-comercial/guia-comercial.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__contato_contato_component__ = __webpack_require__("./src/app/contato/contato.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__anuncie_anuncie_component__ = __webpack_require__("./src/app/anuncie/anuncie.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__guia_comercial_detalhes_detalhes_component__ = __webpack_require__("./src/app/guia-comercial/detalhes/detalhes.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__evento_evento_component__ = __webpack_require__("./src/app/evento/evento.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__noticias_detalhe_noticias_detalhe_noticias_component__ = __webpack_require__("./src/app/noticias/detalhe-noticias/detalhe-noticias.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routing_module__ = __webpack_require__("./src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__banner_slide_banner_slide_component__ = __webpack_require__("./src/app/banner-slide/banner-slide.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__header_header_component__ = __webpack_require__("./src/app/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__footer_footer_component__ = __webpack_require__("./src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__quem_somos_quem_somos_component__ = __webpack_require__("./src/app/quem-somos/quem-somos.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__noticias_noticias_component__ = __webpack_require__("./src/app/noticias/noticias.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__agenda_de_eventos_agenda_de_eventos_component__ = __webpack_require__("./src/app/agenda-de-eventos/agenda-de-eventos.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__guia_comercial_guia_comercial_component__ = __webpack_require__("./src/app/guia-comercial/guia-comercial.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__contato_contato_component__ = __webpack_require__("./src/app/contato/contato.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__anuncie_anuncie_component__ = __webpack_require__("./src/app/anuncie/anuncie.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__guia_comercial_detalhes_detalhes_component__ = __webpack_require__("./src/app/guia-comercial/detalhes/detalhes.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__evento_evento_component__ = __webpack_require__("./src/app/evento/evento.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__noticias_detalhe_noticias_detalhe_noticias_component__ = __webpack_require__("./src/app/noticias/detalhe-noticias/detalhe-noticias.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -315,35 +316,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__banner_slide_banner_slide_component__["a" /* BannerSlideComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__header_header_component__["a" /* HeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__footer_footer_component__["a" /* FooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__quem_somos_quem_somos_component__["a" /* QuemSomosComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__noticias_noticias_component__["a" /* NoticiasComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__agenda_de_eventos_agenda_de_eventos_component__["a" /* AgendaDeEventosComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__guia_comercial_guia_comercial_component__["a" /* GuiaComercialComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__contato_contato_component__["a" /* ContatoComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__anuncie_anuncie_component__["a" /* AnuncieComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__guia_comercial_detalhes_detalhes_component__["a" /* DetalhesComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__evento_evento_component__["a" /* EventoComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__noticias_detalhe_noticias_detalhe_noticias_component__["a" /* DetalheNoticiasComponent */]
+                __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__banner_slide_banner_slide_component__["a" /* BannerSlideComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__quem_somos_quem_somos_component__["a" /* QuemSomosComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__noticias_noticias_component__["a" /* NoticiasComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__agenda_de_eventos_agenda_de_eventos_component__["a" /* AgendaDeEventosComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__guia_comercial_guia_comercial_component__["a" /* GuiaComercialComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__contato_contato_component__["a" /* ContatoComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__anuncie_anuncie_component__["a" /* AnuncieComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__guia_comercial_detalhes_detalhes_component__["a" /* DetalhesComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__evento_evento_component__["a" /* EventoComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__noticias_detalhe_noticias_detalhe_noticias_component__["a" /* DetalheNoticiasComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_6__app_routing_module__["a" /* AppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_7__app_routing_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_4_ng2_progressbar__["a" /* NgProgressModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClientModule */]
+                __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_6__angular_forms__["a" /* FormsModule */]
             ],
             providers: [__WEBPACK_IMPORTED_MODULE_5__http_service__["a" /* HttpService */], __WEBPACK_IMPORTED_MODULE_0__noticias_detalhe_noticias_noticia_resolver_service__["a" /* NoticiaResolverService */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -638,14 +641,14 @@ var DetalhesComponent = /** @class */ (function () {
 /***/ "./src/app/guia-comercial/guia-comercial.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"conteiner\">\n  <section class=\"guia-comercial\">\n    <header>GUIA COMERCIAL <strong>TELEFONES</strong></header>\n\n    <article>\n      <div class=\"logo\">\n        <img src=\"./assets/imagens/guia-comercial/logo.jpg\" alt=\"\">\n      </div>\n      <div>\n        <a routerLink=\"/guia-comercial/1\">Mais detalhes</a>\n        <h4>Alfa Limpeza e Descartavél</h4>\n        <p>Rua São José, 22 Centro Estreito - MA</p>\n        <strong>(99) 3531 - 0402 / 98123 - 4040 zap</strong>\n        <p>portaldoguia@hotmail.com</p>\n        <p>www.portaldoguia.com.br</p>\n      </div>\n    </article>\n    <article>\n      <div class=\"logo\">\n        <img src=\"./assets/imagens/guia-comercial/logo.jpg\" alt=\"\">\n      </div>\n      <div>\n        <a routerLink=\"/guia-comercial/1\">Mais detalhes</a>\n        <h4>Alfa Limpeza e Descartavél</h4>\n        <p>Rua São José, 22 Centro Estreito - MA</p>\n        <strong>(99) 3531 - 0402 / 98123 - 4040 zap</strong>\n        <p>portaldoguia@hotmail.com</p>\n        <p>www.portaldoguia.com.br</p>\n      </div>\n    </article>\n    <article>\n      <div class=\"logo\">\n        <img src=\"./assets/imagens/guia-comercial/logo.jpg\" alt=\"\">\n      </div>\n      <div>\n        <a routerLink=\"/guia-comercial/1\">Mais detalhes</a>\n        <h4>Alfa Limpeza e Descartavél</h4>\n        <p>Rua São José, 22 Centro Estreito - MA</p>\n        <strong>(99) 3531 - 0402 / 98123 - 4040 zap</strong>\n        <p>portaldoguia@hotmail.com</p>\n        <p>www.portaldoguia.com.br</p>\n      </div>\n    </article>\n    <article>\n      <div class=\"logo\">\n        <img src=\"./assets/imagens/guia-comercial/logo.jpg\" alt=\"\">\n      </div>\n      <div>\n        <a routerLink=\"/guia-comercial/1\">Mais detalhes</a>\n        <h4>Alfa Limpeza e Descartavél</h4>\n        <p>Rua São José, 22 Centro Estreito - MA</p>\n        <strong>(99) 3531 - 0402 / 98123 - 4040 zap</strong>\n        <p>portaldoguia@hotmail.com</p>\n        <p>www.portaldoguia.com.br</p>\n      </div>\n    </article>\n    <article>\n      <div class=\"logo\">\n        <img src=\"./assets/imagens/guia-comercial/logo.jpg\" alt=\"\">\n      </div>\n      <div>\n        <a routerLink=\"/guia-comercial/1\">Mais detalhes</a>\n        <h4>Alfa Limpeza e Descartavél</h4>\n        <p>Rua São José, 22 Centro Estreito - MA</p>\n        <strong>(99) 3531 - 0402 / 98123 - 4040 zap</strong>\n        <p>portaldoguia@hotmail.com</p>\n        <p>www.portaldoguia.com.br</p>\n      </div>\n    </article>\n    <article>\n      <div class=\"logo\">\n        <img src=\"./assets/imagens/guia-comercial/logo.jpg\" alt=\"\">\n      </div>\n      <div>\n        <a routerLink=\"/guia-comercial/1\">Mais detalhes</a>\n        <h4>Alfa Limpeza e Descartavél</h4>\n        <p>Rua São José, 22 Centro Estreito - MA</p>\n        <strong>(99) 3531 - 0402 / 98123 - 4040 zap</strong>\n        <p>portaldoguia@hotmail.com</p>\n        <p>www.portaldoguia.com.br</p>\n      </div>\n    </article>\n    <nav>\n      <a href=\"javascript:void(0)\">Anterior</a>  \n      <ul>\n        <li><a href=\"javascript:void(0)\">1</a></li>\n        <li><a href=\"javascript:void(0)\">2</a></li>\n        <li><a href=\"javascript:void(0)\">3</a></li>\n        <li><a href=\"javascript:void(0)\">4</a></li>\n        <li><a href=\"javascript:void(0)\">5</a></li>\n        <li><a href=\"javascript:void(0)\">6</a></li>\n        <li><a href=\"javascript:void(0)\">7</a></li>\n      </ul>\n      <a href=\"javascript:void(0)\">Próximo</a>\n    </nav>\n  </section>\n  <section class=\"segmentos\">\n    <div>\n      <header>\n        <h3>Segmentos</h3> \n      </header>\n      <a href=\"javascript:void(0)\">Academia</a>\n      <a href=\"javascript:void(0)\">Açai</a>\n      <a href=\"javascript:void(0)\">Acessórios p/ Veiculos</a>\n      <a href=\"javascript:void(0)\">Açougue</a>\n      <a href=\"javascript:void(0)\">Adapec</a>\n      <a href=\"javascript:void(0)\">Pizzaria</a>\n      <a href=\"javascript:void(0)\">Areia e Seixo</a>\n      <a href=\"javascript:void(0)\">Calçados</a>\n      <a href=\"javascript:void(0)\">Gráfica</a>\n      <a href=\"javascript:void(0)\">Agência Bancaria</a>\n      <a href=\"javascript:void(0)\">Agropecuária</a>\n      <a href=\"javascript:void(0)\">Alarme</a>\n      <a href=\"javascript:void(0)\">Ar Condicionado</a>\n    </div>\n  </section>\n</div>"
+module.exports = "<div class=\"conteiner\"> \n  <section class=\"guia-comercial\"> \n    <!-- <router-outlet (quantidade)=\"onQuantidade($event)\" class=\"paginas\"></router-outlet> -->\n    <header>GUIA COMERCIAL <strong>TELEFONES</strong></header>    \n    <article *ngFor=\"let empresa of empresas\">\n      <div class=\"logo\">\n        <img [src]=\"empresa?.capa\" alt=\"\">\n      </div>\n      <div>\n        <a routerLink=\"/guia-comercial/{{ empresa.id }}\">Mais detalhes</a>\n        <h4>{{ empresa.nome }}</h4>\n        <p>{{ empresa.endereco }}</p>\n        <strong>{{ empresa.telefones }}</strong>\n        <p>{{ empresa.email }}</p>\n        <p>{{ empresa.site }}</p>\n      </div>\n    </article>\n    <nav>\n      <!-- <a href=\"javascript:void(0)\">Anterior</a>   -->\n      <ul>\n        <li *ngFor=\"let i of quantidade\"><a routerLink=\"/guia-comercial\" [queryParams]=\"{ pagina : i, segmento : segmento, cidade : cidade, categoria : categoria }\">{{ i }}</a></li>\n      </ul>\n      <!-- <a href=\"javascript:void(0)\">Próximo</a> -->\n    </nav>\n  </section>\n  <section class=\"segmentos\">\n    <div>\n      <header>\n        <h3>Segmentos</h3> \n      </header>\n      <a routerLink=\"/guia-comercial\" [queryParams]=\"{ pagina : 1, segmento : segmento.id, cidade : cidade, categoria : categoria }\" *ngFor=\"let segmento of segmentos\">{{ segmento.nome }}</a>\n    </div>\n  </section>\n</div>"
 
 /***/ }),
 
 /***/ "./src/app/guia-comercial/guia-comercial.component.sass":
 /***/ (function(module, exports) {
 
-module.exports = "div.conteiner {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  div.conteiner section.guia-comercial {\n    width: 70%; }\n  div.conteiner section.guia-comercial header {\n      background: #a50006;\n      padding: 10px;\n      color: #ffffff;\n      text-align: center; }\n  div.conteiner section.guia-comercial article {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: start;\n          -ms-flex-pack: start;\n              justify-content: flex-start;\n      padding: 15px;\n      background: #f1f1f1;\n      margin-top: 15px;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n  div.conteiner section.guia-comercial article a {\n        padding: 3px 7px;\n        color: #ffffff;\n        font-size: 0.6em;\n        background: #a50006;\n        float: right; }\n  div.conteiner section.guia-comercial article a:hover {\n          text-decoration: none;\n          background: #78060a; }\n  div.conteiner section.guia-comercial article h4 {\n        color: #a50006;\n        font-size: 1.2em; }\n  div.conteiner section.guia-comercial article p {\n        font-size: 0.8em;\n        color: #666666; }\n  div.conteiner section.guia-comercial article strong {\n        font-size: 0.8em; }\n  div.conteiner section.guia-comercial article div.logo {\n        width: 30%;\n        margin-right: 10px; }\n  div.conteiner section.guia-comercial article div:first-child {\n        padding-right: 10px;\n        border-right: solid thin #cccccc; }\n  div.conteiner section.guia-comercial article div:last-child {\n        width: 70%; }\n  div.conteiner section.guia-comercial article img {\n        width: 100%; }\n  div.conteiner section.guia-comercial nav {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      margin-top: 10px; }\n  div.conteiner section.guia-comercial nav a {\n        color: #666666;\n        font-size: 0.8em; }\n  div.conteiner section.guia-comercial nav ul {\n        width: 150px;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: justify;\n            -ms-flex-pack: justify;\n                justify-content: space-between;\n        margin: 0 10px; }\n  div.conteiner section.guia-comercial nav ul li {\n          display: inline-block; }\n  div.conteiner section.segmentos {\n    width: 27%; }\n  div.conteiner section.segmentos div {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      background: #f1f1f1;\n      border: solid thin #f1f1f1; }\n  div.conteiner section.segmentos div header {\n        background: #a50006;\n        padding: 10px;\n        color: #ffffff;\n        text-align: center; }\n  div.conteiner section.segmentos div header h3 {\n          font-size: 1.2em; }\n  div.conteiner section.segmentos div a {\n        color: #666666;\n        text-decoration: none;\n        padding: 7px 5px;\n        border-bottom: solid thin #cccccc; }\n  div.conteiner section.segmentos div a:hover {\n          text-decoration: underline; }\n  div.conteiner section.segmentos img {\n      width: 100%;\n      margin-top: 15px; }\n  @media screen and (max-width: 1024px) {\n  div.conteiner {\n    display: block; }\n    div.conteiner section.guia-comercial {\n      width: 100%;\n      padding: 0 10px; }\n    div.conteiner section.segmentos {\n      display: none; } }\n"
+module.exports = "div.conteiner {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  div.conteiner section.guia-comercial {\n    width: 70%; }\n  div.conteiner section.guia-comercial header {\n      background: #a50006;\n      padding: 10px;\n      color: #ffffff;\n      text-align: center; }\n  div.conteiner section.guia-comercial article {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: start;\n          -ms-flex-pack: start;\n              justify-content: flex-start;\n      padding: 15px;\n      background: #f1f1f1;\n      margin-top: 15px;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n  div.conteiner section.guia-comercial article a {\n        padding: 3px 7px;\n        color: #ffffff;\n        font-size: 0.6em;\n        background: #a50006;\n        float: right; }\n  div.conteiner section.guia-comercial article a:hover {\n          text-decoration: none;\n          background: #78060a; }\n  div.conteiner section.guia-comercial article h4 {\n        color: #a50006;\n        font-size: 1.2em; }\n  div.conteiner section.guia-comercial article p {\n        font-size: 0.8em;\n        color: #666666; }\n  div.conteiner section.guia-comercial article strong {\n        font-size: 0.8em; }\n  div.conteiner section.guia-comercial article div.logo {\n        width: 30%;\n        margin-right: 10px; }\n  div.conteiner section.guia-comercial article div:first-child {\n        padding-right: 10px;\n        border-right: solid thin #cccccc; }\n  div.conteiner section.guia-comercial article div:last-child {\n        width: 70%; }\n  div.conteiner section.guia-comercial article img {\n        width: 100%;\n        height: 130px; }\n  div.conteiner section.guia-comercial nav {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      margin-top: 10px; }\n  div.conteiner section.guia-comercial nav a {\n        color: #666666;\n        font-size: 0.8em; }\n  div.conteiner section.guia-comercial nav ul {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: justify;\n            -ms-flex-pack: justify;\n                justify-content: space-between;\n        margin: 0 10px; }\n  div.conteiner section.guia-comercial nav ul li {\n          display: inline-block;\n          margin-right: 5px; }\n  div.conteiner section.segmentos {\n    width: 27%; }\n  div.conteiner section.segmentos div {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      background: #f1f1f1;\n      border: solid thin #f1f1f1; }\n  div.conteiner section.segmentos div header {\n        background: #a50006;\n        padding: 10px;\n        color: #ffffff;\n        text-align: center; }\n  div.conteiner section.segmentos div header h3 {\n          font-size: 1.2em; }\n  div.conteiner section.segmentos div a {\n        color: #666666;\n        text-decoration: none;\n        padding: 7px 5px;\n        border-bottom: solid thin #cccccc; }\n  div.conteiner section.segmentos div a:hover {\n          text-decoration: underline; }\n  div.conteiner section.segmentos img {\n      width: 100%;\n      margin-top: 15px; }\n  @media screen and (max-width: 1024px) {\n  div.conteiner {\n    display: block; }\n    div.conteiner section.guia-comercial {\n      width: 100%;\n      padding: 0 10px; }\n    div.conteiner section.segmentos {\n      display: none; } }\n"
 
 /***/ }),
 
@@ -656,6 +659,8 @@ module.exports = "div.conteiner {\n  display: -webkit-box;\n  display: -ms-flexb
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GuiaComercialComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_progressbar__ = __webpack_require__("./node_modules/ng2-progressbar/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__http_service__ = __webpack_require__("./src/app/http.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -667,15 +672,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 var GuiaComercialComponent = /** @class */ (function () {
-    function GuiaComercialComponent(progresso) {
+    function GuiaComercialComponent(route, progresso, http) {
+        var _this = this;
+        this.route = route;
         this.progresso = progresso;
-        this.progresso.start();
+        this.http = http;
+        this.http.ApiGet('guia-comercial/page/quantidade').subscribe(function (response) {
+            _this.quantidade = response;
+        });
+        this.http.ApiGet('guia-comercial/page/segmentos').subscribe(function (response) {
+            _this.segmentos = response.resposta;
+        });
+        this.navegar();
     }
-    GuiaComercialComponent.prototype.ngOnInit = function () {
-    };
-    GuiaComercialComponent.prototype.ngAfterContentInit = function () {
-        this.progresso.done();
+    GuiaComercialComponent.prototype.navegar = function () {
+        var _this = this;
+        this.progresso.start();
+        this.route.queryParams.subscribe(function (query) {
+            _this.http.ApiGet('guia-comercial/page/' + (query['pagina'] || 1) + '/' + (query['segmento'] || 'segmento') + '/' + (query['cidade'] || 'cidade') + '/' + (query['categoria'] || 'categoria')).subscribe(function (response) {
+                _this.empresas = response.resposta;
+                _this.quantidade = response.nav;
+                _this.pagina = (query['pagina'] || 'pagina');
+                _this.segmento = (query['segmento'] || 'segmento');
+                _this.cidade = (query['cidade'] || 'cidade');
+                _this.categoria = (query['categoria'] || 'categoria');
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 300);
+                _this.progresso.done();
+            });
+        });
     };
     GuiaComercialComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -683,7 +712,7 @@ var GuiaComercialComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/guia-comercial/guia-comercial.component.html"),
             styles: [__webpack_require__("./src/app/guia-comercial/guia-comercial.component.sass")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ng2_progressbar__["b" /* NgProgressService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1_ng2_progressbar__["b" /* NgProgressService */], __WEBPACK_IMPORTED_MODULE_2__http_service__["a" /* HttpService */]])
     ], GuiaComercialComponent);
     return GuiaComercialComponent;
 }());
@@ -695,7 +724,7 @@ var GuiaComercialComponent = /** @class */ (function () {
 /***/ "./src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"topo\"> \r\n  <div>  \r\n      <p>Araguiana - TO, Terça-feira<span>, 22 de janeiro de 2018</span></p>\r\n      <ul>\r\n          <li>\r\n              <a href=\"javascript:void(0)\">Guia Médico\r\n                  <div>\r\n                      <a href=\"javascript:void(0)\">Cardiologista</a>\r\n                      <a href=\"javascript:void(0)\">Pediatra</a>\r\n                      <a href=\"javascript:void(0)\">Consultório Odontologico</a> \r\n                  </div>            \r\n              </a>\r\n          </li>\r\n          <li><a href=\"javascript:void(0)\">Eventos</a></li>\r\n          <li><a href=\"javascript:void(0)\">Agência de Turismo</a></li>\r\n          <li><a href=\"javascript:void(0)\">Vídeo</a></li>\r\n          <li><a href=\"javascript:void(0)\">Locadora de carros</a></li>\r\n          <li><a href=\"javascript:void(0)\">Seja nosso parceiro</a></li>\r\n      </ul>\r\n  </div>\r\n</section>\r\n<section class=\"banner\">\r\n  <img class=\"logo\" src=\"./assets/imagens/logo.jpg\" >\r\n  <div class=\"slide_600x100\"><app-banner-slide [imagens]=\"imagens?._600x100\"></app-banner-slide></div>    \r\n  <div class=\"slide_300x100\"><app-banner-slide [imagens]=\"imagens?._300x100\"></app-banner-slide></div>\r\n  <img src=\"./assets/imagens/icon/menu.png\" class=\"menu\" />\r\n</section>\r\n<nav class=\"menu\">\r\n    <img class=\"logo\" src=\"./assets/imagens/logo.png\" >\r\n  <div>\r\n      <a routerLink=\"/\" >HOME</a>\r\n      <a routerLink=\"/quem-somos\">QUEM SOMOS</a>\r\n      <a routerLink=\"/noticias\">NOTÍCIAS</a>\r\n      <a routerLink=\"/guia-comercial\">GUIA COMERCIAL</a>\r\n      <a class=\"sub-item\" href=\"javascript:void(0)\"><span>DISK DELIVERY <img src=\"./assets/imagens/icon/icons8-chevron-right-filled-32.png\" class=\"arrow\" /></span>\r\n          <div>\r\n              <a href=\"javascript:void(0)\">- Gás</a>\r\n              <a href=\"javascript:void(0)\">- Água</a>\r\n              <a href=\"javascript:void(0)\">- Lanches</a>\r\n          </div>\r\n      </a>\r\n      <a routerLink=\"/anuncie\">ANUNCIE</a>\r\n      <a class=\"sub-item\" href=\"javascript:void(0)\"><span>ONDE HOSPEDAR <img src=\"./assets/imagens/icon/icons8-chevron-right-filled-32.png\" class=\"arrow\" /></span>\r\n          <div>\r\n              <a href=\"javascript:void(0)\">- Hotel</a>\r\n              <a href=\"javascript:void(0)\">- Motel</a>\r\n              <a href=\"javascript:void(0)\">- Pousada</a>\r\n              <a href=\"javascript:void(0)\">- Kit-net</a>\r\n          </div>\r\n      </a>\r\n      <a class=\"sub-item\" href=\"javascript:void(0)\"><span>ONDE COMER <img src=\"./assets/imagens/icon/icons8-chevron-right-filled-32.png\" class=\"arrow\" /></span>\r\n          <div>\r\n              <a href=\"javascript:void(0)\">- Churrascaria</a>\r\n              <a href=\"javascript:void(0)\">- Restaurante</a>\r\n              <a href=\"javascript:void(0)\">- Pizzaria</a>\r\n              <a href=\"javascript:void(0)\">- Pit-dog</a>\r\n              <a href=\"javascript:void(0)\">- Lanchonete</a>\r\n              <a href=\"javascript:void(0)\">- Espetinho</a>\r\n          </div>\r\n      </a>\r\n      <a routerLink=\"/contato\">CONTATO</a>\r\n  </div>\r\n</nav>\r\n<section class=\"buscar\">\r\n  <div>\r\n      <label class=\"form-servico\">\r\n          <p>Faça sua busca por:<br>Empresa, Ramo, Telefone ou Serviços.</p>\r\n          <input type=\"search\" placeholder=\"Ex.: produtos, serviços, empresas\">\r\n      </label>\r\n      <label class=\"form-cidade\">\r\n          <input type=\"search\" placeholder=\"Ex.: cidade\">\r\n          <button>BUSCAR</button>\r\n      </label>        \r\n  </div>\r\n</section>"
+module.exports = "<section class=\"topo\"> \r\n  <div>  \r\n      <p>Araguiana - TO, Terça-feira<span>, 22 de janeiro de 2018</span></p>\r\n      <ul>\r\n          <li>\r\n              <a href=\"javascript:void(0)\">Guia Médico\r\n                  <div>\r\n                      <a href=\"javascript:void(0)\">Cardiologista</a>\r\n                      <a href=\"javascript:void(0)\">Pediatra</a>\r\n                      <a href=\"javascript:void(0)\">Consultório Odontologico</a> \r\n                  </div>            \r\n              </a>\r\n          </li>\r\n          <li><a href=\"javascript:void(0)\">Eventos</a></li>\r\n          <li><a href=\"javascript:void(0)\">Agência de Turismo</a></li>\r\n          <li><a href=\"javascript:void(0)\">Vídeo</a></li>\r\n          <li><a href=\"javascript:void(0)\">Locadora de carros</a></li>\r\n          <li><a href=\"javascript:void(0)\">Seja nosso parceiro</a></li>\r\n      </ul>\r\n  </div>\r\n</section>\r\n<section class=\"banner\">\r\n  <img class=\"logo\" src=\"./assets/imagens/logo.jpg\" >\r\n  <div class=\"slide_600x100\"><app-banner-slide [imagens]=\"imagens?._600x100\"></app-banner-slide></div>    \r\n  <div class=\"slide_300x100\"><app-banner-slide [imagens]=\"imagens?._300x100\"></app-banner-slide></div>\r\n  <img src=\"./assets/imagens/icon/menu.png\" class=\"menu\" />\r\n</section>\r\n<nav class=\"menu\">\r\n    <img class=\"logo\" src=\"./assets/imagens/logo.png\" >\r\n  <div>\r\n      <a routerLink=\"/\" >HOME</a>\r\n      <a routerLink=\"/quem-somos\">QUEM SOMOS</a>\r\n      <a routerLink=\"/noticias\">NOTÍCIAS</a>\r\n      <a routerLink=\"/guia-comercial\">GUIA COMERCIAL</a>\r\n      <a class=\"sub-item\" href=\"javascript:void(0)\"><span>DISK DELIVERY <img src=\"./assets/imagens/icon/icons8-chevron-right-filled-32.png\" class=\"arrow\" /></span>\r\n          <div>\r\n              <a href=\"javascript:void(0)\">- Gás</a>\r\n              <a href=\"javascript:void(0)\">- Água</a>\r\n              <a href=\"javascript:void(0)\">- Lanches</a>\r\n          </div>\r\n      </a>\r\n      <a routerLink=\"/anuncie\">ANUNCIE</a>\r\n      <a class=\"sub-item\" href=\"javascript:void(0)\"><span>ONDE HOSPEDAR <img src=\"./assets/imagens/icon/icons8-chevron-right-filled-32.png\" class=\"arrow\" /></span>\r\n          <div>\r\n              <a href=\"javascript:void(0)\">- Hotel</a>\r\n              <a href=\"javascript:void(0)\">- Motel</a>\r\n              <a href=\"javascript:void(0)\">- Pousada</a>\r\n              <a href=\"javascript:void(0)\">- Kit-net</a>\r\n          </div>\r\n      </a>\r\n      <a class=\"sub-item\" href=\"javascript:void(0)\"><span>ONDE COMER <img src=\"./assets/imagens/icon/icons8-chevron-right-filled-32.png\" class=\"arrow\" /></span>\r\n          <div>\r\n              <a href=\"javascript:void(0)\">- Churrascaria</a>\r\n              <a href=\"javascript:void(0)\">- Restaurante</a>\r\n              <a href=\"javascript:void(0)\">- Pizzaria</a>\r\n              <a href=\"javascript:void(0)\">- Pit-dog</a>\r\n              <a href=\"javascript:void(0)\">- Lanchonete</a>\r\n              <a href=\"javascript:void(0)\">- Espetinho</a>\r\n          </div>\r\n      </a>\r\n      <a routerLink=\"/contato\">CONTATO</a>\r\n  </div>\r\n</nav>\r\n<section class=\"buscar\">\r\n  <div>\r\n      <label class=\"form-servico\">\r\n          <p>Faça sua busca por:<br>Empresa, Ramo, Telefone ou Serviços.</p>\r\n          <input type=\"search\" placeholder=\"Ex.: produtos, serviços, empresas\">\r\n      </label>\r\n      <label class=\"form-cidade\">\r\n          <input [(ngModel)]=\"cidade\" name=\"cidade\" (keyup.enter)=\"buscaCidade($event, cidade)\" type=\"search\" placeholder=\"Ex.: cidade\">\r\n          <button>BUSCAR</button>\r\n      </label>        \r\n  </div>\r\n</section>"
 
 /***/ }),
 
@@ -713,6 +742,7 @@ module.exports = "section.topo {\n  background: #efce0f; }\n  section.topo div {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__http_service__ = __webpack_require__("./src/app/http.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -724,10 +754,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent(http) {
+    function HeaderComponent(http, router) {
         this.http = http;
+        this.router = router;
     }
+    HeaderComponent.prototype.buscaCidade = function (cidade) {
+        this.router.navigate(['guia-comercial'], { queryParams: { pagina: 1, segmento: 'segmento', cidade: this.cidade, categoria: 'categoria' } });
+    };
     HeaderComponent.prototype.ngOnInit = function () {
         $('nav.menu a').hover(function () {
             $(this).children('div').slideToggle();
@@ -753,7 +788,8 @@ var HeaderComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/header/header.component.html"),
             styles: [__webpack_require__("./src/app/header/header.component.sass")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__http_service__["a" /* HttpService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__http_service__["a" /* HttpService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]])
     ], HeaderComponent);
     return HeaderComponent;
 }());
@@ -1156,8 +1192,8 @@ var QuemSomosComponent = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
-    api: 'http://portal.test/api/',
-    production: false
+    api: 'http://portaldoguia.com.br/api/',
+    production: true
 };
 
 
@@ -1177,7 +1213,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
