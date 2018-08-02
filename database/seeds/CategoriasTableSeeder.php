@@ -13,15 +13,31 @@ class CategoriasTableSeeder extends Seeder
     public function run()
     {
         Categorias::create([
-            'nome' => 'Onde comer'           
+            'nome' => 'guia médico'           
         ]);
         
         Categorias::create([
-            'nome' => 'Onde hospedar'           
+            'nome' => 'disk delivery'           
         ]);
         
         Categorias::create([
-            'nome' => 'Shows e Baladas'           
+            'nome' => 'onde hospedar'           
+        ]);
+        
+        Categorias::create([
+            'nome' => 'onde comer'           
+        ]);
+        
+        Categorias::create([
+            'nome' => 'transportes'           
+        ]);
+        
+        Categorias::create([
+            'nome' => 'classificados'           
+        ]);
+        
+        Categorias::create([
+            'nome' => 'outros'           
         ]);
     }
 }

@@ -17,6 +17,13 @@ Route::get('/logout', 'AuthController@logOut');
 
 /** PÁGINAS **/
 
+// home
+
+Route::get('/page/get-home', 'page\HomeController@getHome');
+Route::get('/page/mostrar-noticia/{url}', 'page\HomeController@mostrarNoticia');
+
+// banner
+
 Route::get('/banner', 'BannerController@listarBanner');
 
 // guia comercial
@@ -26,9 +33,6 @@ Route::get('/guia-comercial/page/segmentos', 'GuiaComercialController@listarSegm
 Route::get('/guia-comercial/page/{pagina}/{segmento}/{cidade}/{categoria}', 'GuiaComercialController@listarEmpresas');
 //Route::get('/guia-comercial/mostrar/{url}', 'NoticiasController@mostrar');
 
-// noticias
-
-Route::get('/noticias/home/listar', 'NoticiasController@listarHome');
 Route::get('/segmentos/listar', 'SegmentosController@listar');
 
 Route::group(['middleware' => 'jwt'], function()

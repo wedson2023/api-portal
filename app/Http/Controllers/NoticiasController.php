@@ -76,49 +76,49 @@ class NoticiasController extends UploadController
 
     // site
 
-    public function listarHome(){
+//    public function listarHome(){
+//
+//        $resposta = [ 
+//            'noticias' => noticias::where('destaque', '=', 0, 'and')->where('ativo', '=', 1)->orderBy('id', 'desc')->limit(7)->get()->transform(function($item, $key){
+//                return [
+//                    'id' => $item->id,
+//                    'titulo' => substr($item->titulo, 0, 80),
+//                    'categoria' => substr($item->categoria, 0, 20),
+//                    'subtitulo' => substr($item->subtitulo, 0, 135),
+//                    'capa' => url('uploads/noticias/' . $item->capa),
+//                    'url' => urlencode($item->titulo)
+//                ];
+//            }),
+//            'destaque' => noticias::where('destaque', '=', 1, 'and')->where('ativo', '=', 1)->orderBy('id', 'desc')->limit(1)->get()->transform(function($item, $key){
+//                return [
+//                    'id' => $item->id,
+//                    'titulo' => substr($item->titulo, 0, 80),
+//                    'categoria' => substr($item->categoria, 0, 20),
+//                    'subtitulo' => substr($item->subtitulo, 0, 135),
+//                    'capa' => url('uploads/noticias/' . $item->capa),
+//                    'url' => urlencode($item->titulo)
+//                ];
+//            })[0]
+//        ];
+//
+//        return compact('resposta');
+//    }
 
-        $resposta = [ 
-            'noticias' => noticias::where('destaque', '=', 0, 'and')->where('ativo', '=', 1)->orderBy('id', 'desc')->limit(7)->get()->transform(function($item, $key){
-                return [
-                    'id' => $item->id,
-                    'titulo' => substr($item->titulo, 0, 80),
-                    'categoria' => substr($item->categoria, 0, 20),
-                    'subtitulo' => substr($item->subtitulo, 0, 135),
-                    'capa' => url('uploads/noticias/' . $item->capa),
-                    'url' => urlencode($item->titulo)
-                ];
-            }),
-            'destaque' => noticias::where('destaque', '=', 1, 'and')->where('ativo', '=', 1)->orderBy('id', 'desc')->limit(1)->get()->transform(function($item, $key){
-                return [
-                    'id' => $item->id,
-                    'titulo' => substr($item->titulo, 0, 80),
-                    'categoria' => substr($item->categoria, 0, 20),
-                    'subtitulo' => substr($item->subtitulo, 0, 135),
-                    'capa' => url('uploads/noticias/' . $item->capa),
-                    'url' => urlencode($item->titulo)
-                ];
-            })[0]
-        ];
-
-        return compact('resposta');
-    }
-
-    public function mostrar($url){
-
-        $url = urldecode($url);
-        $resposta = noticias::select('template', 'categoria')->where('titulo', '=', $url)->first();
-        $relacionados = noticias::where('categoria', '=', $resposta->categoria, 'and')->where('ativo', '=', 1)->orderByRaw('rand()')->limit(4)->get()->transform(function($item, $key){
-                return [
-                    'id' => $item->id,
-                    'titulo' => substr($item->titulo, 0, 80),
-                    'categoria' => substr($item->categoria, 0, 20),
-                    'subtitulo' => substr($item->subtitulo, 0, 135),
-                    'capa' => url('uploads/noticias/' . $item->capa),
-                    'url' => urlencode($item->titulo)
-                ];
-            });
-
-        return compact('resposta', 'relacionados');
-    }
+//    public function mostrar($url){
+//
+//        $url = urldecode($url);
+//        $resposta = noticias::select('template', 'categoria')->where('titulo', '=', $url)->first();
+//        $relacionados = noticias::where('categoria', '=', $resposta->categoria, 'and')->where('ativo', '=', 1)->orderByRaw('rand()')->limit(4)->get()->transform(function($item, $key){
+//                return [
+//                    'id' => $item->id,
+//                    'titulo' => substr($item->titulo, 0, 80),
+//                    'categoria' => substr($item->categoria, 0, 20),
+//                    'subtitulo' => substr($item->subtitulo, 0, 135),
+//                    'capa' => url('uploads/noticias/' . $item->capa),
+//                    'url' => urlencode($item->titulo)
+//                ];
+//            });
+//
+//        return compact('resposta', 'relacionados');
+//    }
 }

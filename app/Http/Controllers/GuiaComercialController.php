@@ -233,9 +233,9 @@ class GuiaComercialController extends UploadController
 //                $resposta = guiaComercial::offset($offset)->limit($max_paginacao)->get();
 //        endif;
         
-        $a = 1;        
-        while($a <= ceil($count / 1 * 1)):
-            $nav[] = $a;
+        $a = 0;        
+        while($a <= ceil($count / $max_paginacao - $max_paginacao)):
+            $nav[] = $a + 1;
             $a++;
         endwhile;        
         
