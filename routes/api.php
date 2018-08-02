@@ -20,6 +20,7 @@ Route::get('/logout', 'AuthController@logOut');
 // home
 
 Route::get('/page/get-home', 'page\HomeController@getHome');
+Route::get('/page/get-header', 'page\HeaderController@getHeader');
 Route::get('/page/mostrar-noticia/{url}', 'page\HomeController@mostrarNoticia');
 
 // banner

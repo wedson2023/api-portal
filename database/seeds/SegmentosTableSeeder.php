@@ -195,5 +195,10 @@ class SegmentosTableSeeder extends Seeder
             'nome' => 'telefones úteis',
             'categoria_id' => 7           
         ]);
+        
+        Segmentos::create([
+            'nome' => 'gastronomia',
+            'categoria_id' => 7           
+        ]);
     }
 }

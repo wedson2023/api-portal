@@ -246,8 +246,8 @@ class GuiaComercialController extends UploadController
                 'endereco' => $item->endereco,
                 'telefones' => $item->telefones,
                 'capa' => !$item->capa ? url('uploads/guiaComercial/guia.jpg') : $item->capa,
-                'site' => contato_web::where('guia_id', '=', $item->id, 'and')->where('nome', '=', 'site')->first()->url,
-                'email' => contato_web::where('guia_id', '=', $item->id, 'and')->where('nome', '=', 'email')->first()->url
+                'site' => contato_web::where('guia_id', '=', $item->id, 'and')->where('nome', '=', 'site')->first(),
+                'email' => contato_web::where('guia_id', '=', $item->id, 'and')->where('nome', '=', 'email')->first()
             ];
         });
         

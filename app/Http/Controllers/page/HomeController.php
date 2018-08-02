@@ -6,15 +6,20 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\noticias;
 use App\segmentos;
+use App\guiaComercial;
 
 class HomeController extends Controller
 {
     public function getHome() {
         $resposta = [ 
-            'guiaMedico' => segmentos::select('id', 'nome')->where('categoria_id', '=', 1)->get(),
-            'diskDelivery' => segmentos::select('id', 'nome')->where('categoria_id', '=', 2)->get(),
-            'ondeHospedar' => segmentos::select('id', 'nome')->where('categoria_id', '=', 3)->get(),
-            'ondeComer' => segmentos::select('id', 'nome')->where('categoria_id', '=', 4)->get(),
+            'gastronomia' => guiaComercial::where('segmento_id', '=', 35)->get()->transform(function($item, $key){
+                return [
+                    'id' => $item->id,
+                    'capa' => $item->capa ? url('uploads/guiaComercial/' . $item->capa) : url('uploads/guiaComercial/guia.jpg'),
+                    'nome' => $item->nome,
+                    'endereco' => $item->endereco
+                ];
+            }),
             'transportes' => segmentos::select('id', 'nome')->where('categoria_id', '=', 5, 'and')->whereIn('id', [18, 19, 20, 21, 22])->get(),
             'classificados' => segmentos::select('id', 'nome')->where('categoria_id', '=', 6, 'and')->whereIn('id', [23, 24, 25, 26, 27])->get(),
             'outros' => segmentos::select('id', 'nome')->where('categoria_id', '=', 7, 'and')->whereIn('id', [28, 29, 30, 31, 32, 33, 34])->get(),
