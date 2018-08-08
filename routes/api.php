@@ -13,7 +13,6 @@
 
 Route::post('/login', 'AuthController@login');
 Route::get('/logout', 'AuthController@logOut');
-//Route::get('/validar-sessao', 'AuthController@validarSessao');
 
 /** PÁGINAS **/
 
@@ -29,10 +28,9 @@ Route::get('/banner', 'BannerController@listarBanner');
 
 // guia comercial
 
-Route::get('/guia-comercial/page/quantidade', 'GuiaComercialController@quantidade');
-Route::get('/guia-comercial/page/segmentos', 'GuiaComercialController@listarSegmentos');
-Route::get('/guia-comercial/page/{pagina}/{segmento}/{cidade}/{categoria}', 'GuiaComercialController@listarEmpresas');
-//Route::get('/guia-comercial/mostrar/{url}', 'NoticiasController@mostrar');
+Route::get('/guia-comercial/page/quantidade', 'page\GuiaComercialController@quantidade');
+Route::get('/guia-comercial/page/segmentos', 'page\GuiaComercialController@listarSegmentos');
+Route::get('/guia-comercial/page/{pagina}/{segmento}/{cidade}/{categoria}', 'page\GuiaComercialController@listarEmpresas');
 
 Route::get('/segmentos/listar', 'SegmentosController@listar');
 
