@@ -11,15 +11,7 @@ use App\guiaComercial;
 class HomeController extends Controller
 {
     public function getHome() {
-        $resposta = [ 
-            'gastronomia' => guiaComercial::where('segmento_id', '=', 35)->get()->transform(function($item, $key){
-                return [
-                    'id' => $item->id,
-                    'capa' => $item->capa ? url('uploads/guiaComercial/' . $item->capa) : url('uploads/guiaComercial/guia.jpg'),
-                    'nome' => $item->nome,
-                    'endereco' => $item->endereco
-                ];
-            }),
+        $resposta = [             
             'transportes' => segmentos::select('id', 'nome')->where('categoria_id', '=', 5, 'and')->whereIn('id', [18, 19, 20, 21, 22])->get(),
             'classificados' => segmentos::select('id', 'nome')->where('categoria_id', '=', 6, 'and')->whereIn('id', [23, 24, 25, 26, 27])->get(),
             'outros' => segmentos::select('id', 'nome')->where('categoria_id', '=', 7, 'and')->whereIn('id', [28, 29, 30, 31, 32, 33, 34])->get(),
@@ -42,7 +34,24 @@ class HomeController extends Controller
                     'capa' => url('uploads/noticias/' . $item->capa),
                     'url' => urlencode($item->titulo)
                 ];
-            })[0]
+            })[0],
+            'gastronomia' => guiaComercial::where('segmento_id', '=', 35)->orderByRaw('rand()')->limit(6)->get()->transform(function($item, $key){
+                return [
+                    'id' => $item->id,
+                    'capa' => $item->capa ? url('uploads/guiaComercial/' . $item->capa) : url('uploads/guiaComercial/guia.jpg'),
+                    'nome' => $item->nome,
+                    'endereco' => $item->endereco
+                ];
+            }),
+            'empresasDestaques' => guiaComercial::whereNotNull('capa')->orderByRaw('rand()')->limit(14)->get()->transform(function($item, $key){
+                return [
+                    'id' => $item->id,
+                    'capa' => $item->capa ? url('uploads/guiaComercial/' . $item->capa) : url('uploads/guiaComercial/guia.jpg'),
+                    'nome' => $item->nome,
+                    'endereco' => $item->endereco,
+                    'segmento_id' => $item->segmento_id
+                ];
+            })
         ];
 
         return compact('resposta');

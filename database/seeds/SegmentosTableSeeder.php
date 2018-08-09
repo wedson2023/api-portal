@@ -15,189 +15,199 @@ class SegmentosTableSeeder extends Seeder
         // categoria guia medico
         
         Segmentos::create([
-            'nome' => 'cardiologista',
+            'nome' => 'Cardiologista',
             'categoria_id' => 1
         ]);
         
         Segmentos::create([
-            'nome' => 'pediatra',
+            'nome' => 'Pediatra',
             'categoria_id' => 1           
         ]);
         
         Segmentos::create([
-            'nome' => 'plantão de farmácias',
+            'nome' => 'Plantão de farmácias',
             'categoria_id' => 1           
         ]);
         
         Segmentos::create([
-            'nome' => 'consultório odontologico',
+            'nome' => 'Consultório odontologico',
             'categoria_id' => 1           
         ]);
         
         // categoria disk delivery
         
         Segmentos::create([
-            'nome' => 'gás',
+            'nome' => 'Gás',
             'categoria_id' => 2
         ]);        
         
         Segmentos::create([
-            'nome' => 'água',
+            'nome' => 'Água',
             'categoria_id' => 2           
         ]);
         
         Segmentos::create([
-            'nome' => 'lances',
+            'nome' => 'Lances',
             'categoria_id' => 2           
         ]);
         
         // categoria onde hospedar
         
         Segmentos::create([
-            'nome' => 'hotel',
+            'nome' => 'Hotel',
             'categoria_id' => 3
         ]);        
         
         Segmentos::create([
-            'nome' => 'motel',
+            'nome' => 'Motel',
             'categoria_id' => 3           
         ]);
         
         Segmentos::create([
-            'nome' => 'pousada',
+            'nome' => 'Pousada',
             'categoria_id' => 3           
         ]);
         
         Segmentos::create([
-            'nome' => 'kit-net',
+            'nome' => 'Kit-net',
             'categoria_id' => 3           
         ]);
         
         // categoria onde comer
         
         Segmentos::create([
-            'nome' => 'churrascaria',
+            'nome' => 'Churrascaria',
             'categoria_id' => 4
         ]);        
         
         Segmentos::create([
-            'nome' => 'restaurante',
+            'nome' => 'Restaurante',
             'categoria_id' => 4           
         ]);
         
         Segmentos::create([
-            'nome' => 'pizzaria',
+            'nome' => 'Pizzaria',
             'categoria_id' => 4           
         ]);
         
         Segmentos::create([
-            'nome' => 'pit-dog',
+            'nome' => 'Pit-dog',
             'categoria_id' => 4           
         ]);
         
         Segmentos::create([
-            'nome' => 'lanchonete',
+            'nome' => 'Lanchonete',
             'categoria_id' => 4           
         ]);
         
         Segmentos::create([
-            'nome' => 'espetinho',
+            'nome' => 'Espetinho',
             'categoria_id' => 4           
         ]);
         
         // categoria transportes
         
         Segmentos::create([
-            'nome' => 'coletivo',
+            'nome' => 'Coletivo',
             'categoria_id' => 5
         ]);        
         
         Segmentos::create([
-            'nome' => 'moto taxí',
+            'nome' => 'Moto taxí',
             'categoria_id' => 5           
         ]);
         
         Segmentos::create([
-            'nome' => 'ônibus',
+            'nome' => 'Ônibus',
             'categoria_id' => 5           
         ]);
         
         Segmentos::create([
-            'nome' => 'taxí',
+            'nome' => 'Taxí',
             'categoria_id' => 5           
         ]);
         
         Segmentos::create([
-            'nome' => 'van',
+            'nome' => 'Van',
             'categoria_id' => 5           
         ]);
         
          // categoria classificados
         
         Segmentos::create([
-            'nome' => 'acompanhantes',
+            'nome' => 'Acompanhantes',
             'categoria_id' => 6
         ]);        
         
         Segmentos::create([
-            'nome' => 'empregos',
+            'nome' => 'Empregos',
             'categoria_id' => 6           
         ]);
         
         Segmentos::create([
-            'nome' => 'imóveis',
+            'nome' => 'Imóveis',
             'categoria_id' => 6           
         ]);
         
         Segmentos::create([
-            'nome' => 'serviços e produtos',
+            'nome' => 'Serviços e produtos',
             'categoria_id' => 6           
         ]);
         
         Segmentos::create([
-            'nome' => 'veiculos',
+            'nome' => 'Veiculos',
             'categoria_id' => 6           
         ]);
         
          // categoria outros
         
         Segmentos::create([
-            'nome' => 'aeroporto',
+            'nome' => 'Aeroporto',
             'categoria_id' => 7
         ]);        
         
         Segmentos::create([
-            'nome' => 'ação social',
+            'nome' => 'Ação social',
             'categoria_id' => 7           
         ]);
         
         Segmentos::create([
-            'nome' => 'feiras livres',
+            'nome' => 'Feiras livres',
             'categoria_id' => 7           
         ]);
         
         Segmentos::create([
-            'nome' => 'associações',
+            'nome' => 'Associações',
             'categoria_id' => 7           
         ]);
         
         Segmentos::create([
-            'nome' => 'mercado municipal',
+            'nome' => 'Mercado municipal',
             'categoria_id' => 7           
         ]);
         
         Segmentos::create([
-            'nome' => 'sindicatos',
+            'nome' => 'Sindicatos',
             'categoria_id' => 7           
         ]);
         
         Segmentos::create([
-            'nome' => 'telefones úteis',
+            'nome' => 'Telefones úteis',
             'categoria_id' => 7           
         ]);
         
         Segmentos::create([
-            'nome' => 'gastronomia',
+            'nome' => 'Gastronomia',
+            'categoria_id' => 7           
+        ]);
+        
+        Segmentos::create([
+            'nome' => 'Agência turismo',
+            'categoria_id' => 7           
+        ]);
+        
+        Segmentos::create([
+            'nome' => 'Locadora de carros',
             'categoria_id' => 7           
         ]);
     }

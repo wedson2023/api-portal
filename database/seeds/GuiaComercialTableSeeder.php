@@ -24,7 +24,7 @@ class GuiaComercialTableSeeder extends Seeder
         ]);
         
         GuiaComercial::create([
-            'nome' => 'Degraus Restaurantes',
+            'nome' => 'Degraus Restaurantes 01',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
             'horario' => 'De segunda a sexta de 13 as 23 horas',
@@ -35,7 +35,7 @@ class GuiaComercialTableSeeder extends Seeder
         ]);
         
         GuiaComercial::create([
-            'nome' => 'Degraus Restaurantes',
+            'nome' => 'Degraus Restaurantes 02',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
             'horario' => 'De segunda a sexta de 13 as 23 horas',
@@ -46,13 +46,190 @@ class GuiaComercialTableSeeder extends Seeder
         ]);
         
         GuiaComercial::create([
-            'nome' => 'Degraus Restaurantes',
+            'nome' => 'Degraus Restaurantes 03',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
             'horario' => 'De segunda a sexta de 13 as 23 horas',
             'formas_pagamento' => null,
             'cidade' => 'Estreito',
             'segmento_id' => 35,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'Degraus Restaurantes 04',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 35,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'Degraus Restaurantes 05',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 35,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'Degraus Restaurantes 06',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 35,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'wedson webdesigner',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa01.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 24,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'wedson webdesigner',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa02.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 42,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'wedson webdesigner',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa03.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 24,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'wedson webdesigner',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa04.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 24,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'wedson webdesigner',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa05.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 24,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'wedson webdesigner',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa06.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 24,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'wedson webdesigner',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa07.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 24,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'wedson webdesigner',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa08.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 24,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'wedson webdesigner',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa09.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 24,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'wedson webdesigner',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa10.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 24,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'wedson webdesigner',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa11.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 24,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        GuiaComercial::create([
+            'nome' => 'wedson webdesigner',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa12.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 24,
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
     }

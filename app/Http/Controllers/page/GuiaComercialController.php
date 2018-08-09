@@ -142,7 +142,7 @@ class GuiaComercialController extends Controller
                 'nome' => $item->nome,
                 'endereco' => $item->endereco,
                 'telefones' => $item->telefones,
-                'capa' => !$item->capa ? url('uploads/guiaComercial/guia.jpg') : $item->capa,
+                'capa' => !$item->capa ? url('uploads/guiaComercial/guia.jpg') : url('uploads/guiaComercial/' . $item->capa),
                 'site' => contato_web::where('guia_id', '=', $item->id, 'and')->where('nome', '=', 'site')->first(),
                 'email' => contato_web::where('guia_id', '=', $item->id, 'and')->where('nome', '=', 'email')->first()
             ];
