@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Noticias;
+use App\noticias;
 
 class NoticiasTableSeeder extends Seeder
 {
@@ -12,7 +12,7 @@ class NoticiasTableSeeder extends Seeder
      */
     public function run()
     {
-        Noticias::create([
+        noticias::create([
             'fonte' => 'R7',
             'titulo' => 'Após vai e vem, presidente do TRF4 mantém Lula preso',
             'subtitulo' => 'Polêmica judicial teve início com a decisão do desembargador plantonista Rogério Favreto conceder habeas corpus para soltar o ex-presidente',
@@ -24,7 +24,7 @@ class NoticiasTableSeeder extends Seeder
             'ativo' => true            
         ]);
         
-        Noticias::create([
+        noticias::create([
             'fonte' => 'R7',
             'titulo' => 'Após vai e vem, presidente do TRF4 mantém Lula preso',
             'subtitulo' => 'Polêmica judicial teve início com a decisão do desembargador plantonista Rogério Favreto conceder habeas corpus para soltar o ex-presidente',
@@ -36,7 +36,7 @@ class NoticiasTableSeeder extends Seeder
             'ativo' => true            
         ]);
         
-        Noticias::create([
+        noticias::create([
             'fonte' => 'R7',
             'titulo' => 'Após vai e vem, presidente do TRF4 mantém Lula preso',
             'subtitulo' => 'Polêmica judicial teve início com a decisão do desembargador plantonista Rogério Favreto conceder habeas corpus para soltar o ex-presidente',
@@ -48,7 +48,7 @@ class NoticiasTableSeeder extends Seeder
             'ativo' => true            
         ]);
         
-        Noticias::create([
+        noticias::create([
             'fonte' => 'R7',
             'titulo' => 'Após vai e vem, presidente do TRF4 mantém Lula preso',
             'subtitulo' => 'Polêmica judicial teve início com a decisão do desembargador plantonista Rogério Favreto conceder habeas corpus para soltar o ex-presidente',
@@ -60,7 +60,7 @@ class NoticiasTableSeeder extends Seeder
             'ativo' => true            
         ]);
         
-        Noticias::create([
+        noticias::create([
             'fonte' => 'R7',
             'titulo' => 'Após vai e vem, presidente do TRF4 mantém Lula preso',
             'subtitulo' => 'Polêmica judicial teve início com a decisão do desembargador plantonista Rogério Favreto conceder habeas corpus para soltar o ex-presidente',
@@ -72,7 +72,7 @@ class NoticiasTableSeeder extends Seeder
             'ativo' => true            
         ]);
         
-        Noticias::create([
+        noticias::create([
             'fonte' => 'R7',
             'titulo' => 'Após vai e vem, presidente do TRF4 mantém Lula preso',
             'subtitulo' => 'Polêmica judicial teve início com a decisão do desembargador plantonista Rogério Favreto conceder habeas corpus para soltar o ex-presidente',
@@ -84,7 +84,7 @@ class NoticiasTableSeeder extends Seeder
             'ativo' => true            
         ]);
         
-        Noticias::create([
+        noticias::create([
             'fonte' => 'R7',
             'titulo' => 'Após vai e vem, presidente do TRF4 mantém Lula preso',
             'subtitulo' => 'Polêmica judicial teve início com a decisão do desembargador plantonista Rogério Favreto conceder habeas corpus para soltar o ex-presidente',
@@ -96,7 +96,7 @@ class NoticiasTableSeeder extends Seeder
             'ativo' => true            
         ]);
         
-        Noticias::create([
+        noticias::create([
             'fonte' => 'R7',
             'titulo' => 'Após vai e vem, presidente do TRF4 mantém Lula preso',
             'subtitulo' => 'Polêmica judicial teve início com a decisão do desembargador plantonista Rogério Favreto conceder habeas corpus para soltar o ex-presidente',
@@ -108,7 +108,7 @@ class NoticiasTableSeeder extends Seeder
             'ativo' => true            
         ]);
         
-        Noticias::create([
+        noticias::create([
             'fonte' => 'R7',
             'titulo' => 'Após vai e vem, presidente do TRF4 mantém Lula preso',
             'subtitulo' => 'Polêmica judicial teve início com a decisão do desembargador plantonista Rogério Favreto conceder habeas corpus para soltar o ex-presidente',

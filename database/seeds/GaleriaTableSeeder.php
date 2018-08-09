@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Galeria;
+use App\galeria;
 class GaleriaTableSeeder extends Seeder
 {
     /**
@@ -11,42 +11,42 @@ class GaleriaTableSeeder extends Seeder
      */
     public function run()
     {
-        Galeria::create([
+        galeria::create([
             'nome' => '01.jpg', 
             'guia_id' => 1
         ]);
         
-        Galeria::create([
+        galeria::create([
             'nome' => '02.jpg', 
             'guia_id' => 1
         ]);
         
-        Galeria::create([
+        galeria::create([
             'nome' => '03.jpg', 
             'guia_id' => 1
         ]);
         
-        Galeria::create([
+        galeria::create([
             'nome' => '04.jpg', 
             'guia_id' => 1
         ]);
         
-        Galeria::create([
+        galeria::create([
             'nome' => '05.jpg', 
             'guia_id' => 1
         ]);
         
-        Galeria::create([
+        galeria::create([
             'nome' => '06.jpg', 
             'guia_id' => 1
         ]);
         
-        Galeria::create([
+        galeria::create([
             'nome' => '07.jpg', 
             'guia_id' => 1
         ]);
         
-        Galeria::create([
+        galeria::create([
             'nome' => '08.jpg', 
             'guia_id' => 1
         ]);

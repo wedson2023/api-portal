@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use App\Usuario;
+use App\usuario;
 
 class UsuariosTableSeeder extends Seeder
 {
@@ -13,7 +13,7 @@ class UsuariosTableSeeder extends Seeder
      */
     public function run()
     {
-        Usuario::create([
+        usuario::create([
             'nome' => 'Adinaldo',
             'password' => Hash::make('5021ad')
         ]);

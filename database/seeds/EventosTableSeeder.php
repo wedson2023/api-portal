@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Eventos;
+use App\eventos;
 class EventosTableSeeder extends Seeder
 {
     /**
@@ -12,7 +12,7 @@ class EventosTableSeeder extends Seeder
     public function run()
     {
         
-        Eventos::create([
+        eventos::create([
             'nome' => 'Felipe e Matheus',
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',
@@ -22,7 +22,7 @@ class EventosTableSeeder extends Seeder
             'categoria_id' => 3
         ]);
         
-        Eventos::create([
+        eventos::create([
             'nome' => 'Felipe e Matheus',
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',
@@ -32,7 +32,7 @@ class EventosTableSeeder extends Seeder
             'categoria_id' => 3
         ]);
         
-        Eventos::create([
+        eventos::create([
             'nome' => 'Felipe e Matheus',
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',
@@ -42,7 +42,7 @@ class EventosTableSeeder extends Seeder
             'categoria_id' => 3
         ]);
         
-        Eventos::create([
+        eventos::create([
             'nome' => 'Felipe e Matheus',
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',
@@ -52,7 +52,7 @@ class EventosTableSeeder extends Seeder
             'categoria_id' => 3
         ]);
         
-        Eventos::create([
+        eventos::create([
             'nome' => 'Felipe e Matheus',
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',
@@ -62,7 +62,7 @@ class EventosTableSeeder extends Seeder
             'categoria_id' => 3
         ]);
         
-        Eventos::create([
+        eventos::create([
             'nome' => 'Felipe e Matheus',
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',
@@ -72,7 +72,7 @@ class EventosTableSeeder extends Seeder
             'categoria_id' => 3
         ]);
         
-        Eventos::create([
+        eventos::create([
             'nome' => 'Felipe e Matheus',
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',

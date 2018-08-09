@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Botoes;
+use App\botoes;
 
 class BotoesTableSeeder extends Seeder
 {
@@ -13,37 +13,37 @@ class BotoesTableSeeder extends Seeder
     public function run()
     {
         
-        Botoes::create([
+        botoes::create([
             'nome' => 'Mídia kit',  
             'arquivo' => null
         ]);
         
-        Botoes::create([
+        botoes::create([
             'nome' => 'Destino e Horários',  
             'arquivo' => null
         ]);
         
-        Botoes::create([
+        botoes::create([
             'nome' => 'R$ 34.500,00',  
             'arquivo' => null
         ]);
         
-        Botoes::create([
+        botoes::create([
             'nome' => 'Relação moto taxí',  
             'arquivo' => null
         ]);
         
-        Botoes::create([
+        botoes::create([
             'nome' => 'Mais detalhes',  
             'arquivo' => null
         ]);
         
-        Botoes::create([
+        botoes::create([
             'nome' => 'Itinerante e horários',  
             'arquivo' => 'arquivo.pdf'
         ]);
         
-        Botoes::create([
+        botoes::create([
             'nome' => 'Promoção',  
             'arquivo' => null
         ]);

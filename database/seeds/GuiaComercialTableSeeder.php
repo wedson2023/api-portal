@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\GuiaComercial;
+use App\guiaComercial;
 
 class GuiaComercialTableSeeder extends Seeder
 {
@@ -12,7 +12,7 @@ class GuiaComercialTableSeeder extends Seeder
      */
     public function run()
     {
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'Maranata Espetos',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -23,7 +23,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Há mais de 3 anos no mercado Maranata Fabrica de Espetos, produzindo produtos sempre fresquinhos para seu churrasco.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'Degraus Restaurantes 01',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -34,7 +34,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'Degraus Restaurantes 02',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -45,7 +45,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'Degraus Restaurantes 03',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -56,7 +56,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'Degraus Restaurantes 04',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -67,7 +67,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'Degraus Restaurantes 05',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -78,7 +78,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'Degraus Restaurantes 06',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -89,7 +89,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'wedson webdesigner',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -101,7 +101,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'wedson webdesigner',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -113,7 +113,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'wedson webdesigner',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -125,7 +125,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'wedson webdesigner',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -137,7 +137,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'wedson webdesigner',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -149,7 +149,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'wedson webdesigner',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -161,7 +161,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'wedson webdesigner',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -173,7 +173,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'wedson webdesigner',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -185,7 +185,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'wedson webdesigner',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -197,7 +197,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'wedson webdesigner',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -209,7 +209,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'wedson webdesigner',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
@@ -221,7 +221,7 @@ class GuiaComercialTableSeeder extends Seeder
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
         
-        GuiaComercial::create([
+        guiaComercial::create([
             'nome' => 'wedson webdesigner',
             'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
             'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
