@@ -24,6 +24,10 @@ Route::get('/page/mostrar-noticia/{url}', 'page\HomeController@mostrarNoticia');
 
 // banner
 
+Route::get('/page/get-footer', 'page\FooterController@getFooter');
+
+// Footer
+
 Route::get('/banner', 'BannerController@listarBanner');
 
 // guia comercial

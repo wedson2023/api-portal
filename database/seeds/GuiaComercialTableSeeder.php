@@ -232,5 +232,53 @@ class GuiaComercialTableSeeder extends Seeder
             'segmento_id' => 24,
             'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
         ]);
+        
+        guiaComercial::create([
+            'nome' => 'Parque Simba',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa12.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 38,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        guiaComercial::create([
+            'nome' => 'Parque Simba',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => 'capa12.jpg',
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 38,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        guiaComercial::create([
+            'nome' => 'Universidade e Cursos',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => null,
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 39,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
+        
+        guiaComercial::create([
+            'nome' => 'Universidade e Cursos',
+            'endereco' => 'Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO',
+            'telefones' => '(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214',
+            'horario' => 'De segunda a sexta de 13 as 23 horas',
+            'capa' => null,
+            'formas_pagamento' => null,
+            'cidade' => 'Estreito',
+            'segmento_id' => 39,
+            'template' => 'Informações sobre restaurantes, bares, cafeterias, pubs entre outros.'            
+        ]);
     }
 }

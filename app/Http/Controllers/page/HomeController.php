@@ -51,7 +51,23 @@ class HomeController extends Controller
                     'endereco' => $item->endereco,
                     'segmento_id' => $item->segmento_id
                 ];
-            })
+            }),
+            'turisticos' => guiaComercial::where('segmento_id', '=', 38)->orderByRaw('rand()')->limit(2)->get()->transform(function($item, $key){
+                return [
+                    'id' => $item->id,
+                    'capa' => $item->capa ? url('uploads/guiaComercial/' . $item->capa) : url('uploads/guiaComercial/guia.jpg'),
+                    'nome' => $item->nome,
+                    'endereco' => $item->endereco
+                ];
+            }),
+            'cursos' => guiaComercial::where('segmento_id', '=', 39)->orderByRaw('rand()')->limit(2)->get()->transform(function($item, $key){
+                return [
+                    'id' => $item->id,
+                    'capa' => $item->capa ? url('uploads/guiaComercial/' . $item->capa) : url('uploads/guiaComercial/guia.jpg'),
+                    'nome' => $item->nome,
+                    'endereco' => $item->endereco
+                ];
+            }),
         ];
 
         return compact('resposta');

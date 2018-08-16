@@ -210,5 +210,15 @@ class SegmentosTableSeeder extends Seeder
             'nome' => 'Locadora de carros',
             'categoria_id' => 7           
         ]);
+        
+        segmentos::create([
+            'nome' => 'Pontos turisticos',
+            'categoria_id' => 7           
+        ]);
+        
+        segmentos::create([
+            'nome' => 'Universidades e cursos',
+            'categoria_id' => 7           
+        ]);
     }
 }
