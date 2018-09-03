@@ -26,6 +26,7 @@ class CreateGuiaComercialsTable extends Migration
             $table->string('formas_pagamento', 250)->nullable();
             $table->text('template', 5000)->nullable();
             $table->boolean('ativo')->default(true);
+            $table->boolean('destaque')->default(false);
             $table->timestamps();
         });
     }

@@ -37,6 +37,7 @@ Route::get('/guia-comercial/page/segmentos', 'page\GuiaComercialController@lista
 Route::get('/guia-comercial/page/{pagina}/{segmento}/{cidade}/{categoria}', 'page\GuiaComercialController@listarEmpresas');
 
 Route::get('/segmentos/listar', 'SegmentosController@listar');
+Route::get('/segmentos/{segmento}', 'SegmentosController@getSegmento');
 
 Route::group(['middleware' => 'jwt'], function()
 {

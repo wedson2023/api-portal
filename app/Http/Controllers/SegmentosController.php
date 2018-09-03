@@ -11,6 +11,11 @@ class SegmentosController extends Controller
         $resposta = segmentos::all();
         return compact('resposta');
     }
+
+    public function getSegmento($segmento){
+        $resposta = segmentos::select('id')->where('nome', 'like', '%' . $segmento . '%')->first();
+        return compact('resposta');
+    }
     
     public function listarTodos() {
         $registros = segmentos::join('categorias', 'categorias.id', '=', 'segmentos.categoria_id')->select('segmentos.id', 'segmentos.nome', 'categorias.nome as categoria')->Paginate(10);

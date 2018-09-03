@@ -51,6 +51,7 @@ class GuiaComercialController extends UploadController
         $resposta->formas_pagamento = $request->input('formas_pagamento');
         $resposta->template = $request->input('template');
         $resposta->ativo = $request->input('ativo'); 
+        $resposta->destaque = $request->input('destaque'); 
         
         $resposta->save();
         
@@ -79,7 +80,8 @@ class GuiaComercialController extends UploadController
         $resposta->segmento_id = $request->input('segmento_id');
         $resposta->formas_pagamento = $request->input('formas_pagamento');
         $resposta->template = $request->input('template');
-        $resposta->ativo = $request->input('ativo'); 
+        $resposta->ativo = $request->input('ativo');
+        $resposta->destaque = $request->input('destaque');
         
         $resposta->save();
         
@@ -89,180 +91,4 @@ class GuiaComercialController extends UploadController
         
         return compact('resposta');
     }
-    
-    // rotas páginas
-    
-//    public function listarSegmentos() {
-//        $resposta = guiaComercial::select('segmentos.id', 'segmentos.nome')->join('segmentos', 'segmento_id', '=', 'segmentos.id')->distinct()->get();
-//        return compact('resposta');
-//    }
-//    
-//    public function listarEmpresas($pagina, $segmento, $cidade, $categoria) {
-//        
-//        $max_paginacao = 15; 
-//        $offset = !is_null($pagina) ? ($pagina / $max_paginacao - $max_paginacao) : 0; 
-//        
-//        
-//        if($segmento != 'segmento' and $cidade != 'cidade' and $categoria  != 'categoria'):
-//            $count = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('cidade', 'like', '%' . $cidade . '%', 'and')
-//                    ->where('segmento_id', '=', $segmento, 'and')
-//                    ->where('categoria_id', '=', $categoria)
-//                    ->count();
-//
-//            $resposta = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('cidade', 'like', '%' . $cidade . '%', 'and')
-//                    ->where('segmento_id', '=', $segmento, 'and')
-//                    ->where('categoria_id', '=', $categoria)
-//                    ->offset($offset)
-//                    ->limit($max_paginacao)
-//                    ->get();
-//        elseif($segmento != 'segmento' and $cidade != 'cidade'):
-//            $count = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('cidade', 'like', '%' . $cidade . '%', 'and')
-//                    ->where('segmento_id', '=', $segmento)
-//                    ->count();
-//
-//            $resposta = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('cidade', 'like', '%' . $cidade . '%', 'and')
-//                    ->where('segmento_id', '=', $segmento)
-//                    ->offset($offset)
-//                    ->limit($max_paginacao)
-//                    ->get();
-//          
-//        elseif($segmento != 'segmento' and $categoria != 'categoria'):
-//            $count = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('segmento_id', '=', $segmento, 'and')
-//                    ->where('categoria_id', '=', $categoria)
-//                    ->count();
-//
-//            $resposta = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('segmento_id', '=', $segmento, 'and')
-//                    ->where('categoria_id', '=', $categoria)
-//                    ->offset($offset)
-//                    ->limit($max_paginacao)
-//                    ->get();
-//            
-//        elseif($cidade != 'cidade' and $categoria != 'categoria'):
-//            $count = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('cidade', 'like', '%' . $cidade . '%', 'and')
-//                    ->where('categoria_id', '=', $categoria)
-//                    ->count();
-//
-//            $resposta = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('cidade', 'like', '%' . $cidade . '%', 'and')
-//                    ->where('categoria_id', '=', $categoria)
-//                    ->offset($offset)
-//                    ->limit($max_paginacao)
-//                    ->get();
-//            
-//        elseif($segmento != 'segmento'):
-//            $count = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('segmento_id', '=', $segmento)
-//                    ->count();
-//
-//            $resposta = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('segmento_id', '=', $segmento)
-//                    ->offset($offset)
-//                    ->limit($max_paginacao)
-//                    ->get();
-//            
-//        elseif($cidade != 'cidade'):
-//            $count = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('cidade', 'like', '%' . $cidade . '%', 'and')
-//                    ->count();
-//
-//            $resposta = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('cidade', 'like', '%' . $cidade . '%', 'and')
-//                    ->offset($offset)
-//                    ->limit($max_paginacao)
-//                    ->get();
-//        elseif($categoria != 'categoria'):
-//            $count = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('categoria_id', '=', $categoria)
-//                    ->count();
-//
-//            $resposta = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->where('categoria_id', '=', $categoria)
-//                    ->offset($offset)
-//                    ->limit($max_paginacao)
-//                    ->get();
-//            else:
-//            $count = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->count();
-//
-//            $resposta = guiaComercial::select('guia_comercials.*')
-//                    ->join('segmentos', 'segmento_id', '=', 'segmentos.id')
-//                    ->offset($offset)
-//                    ->limit($max_paginacao)
-//                    ->get();
-//        endif;
-//        
-////        if($categoria != 'categoria' and $segmento != 'segmento' and $cidade  != 'cidade'):;
-////                $count = guiaComercial::join('segmentos', 'segmento_id', '=', 'segmentos.id')->where('cidade', 'like', '%' . $cidade . '%', 'and')->where('segmento_id', '=', $segmento)->where('categoria_id', '=', $categoria)->count();
-////                $resposta = guiaComercial::select('guia_comercials.*')->join('segmentos', 'segmento_id', '=', 'segmentos.id')->where('cidade', 'like', '%' . $cidade . '%', 'and')->where('segmento_id', '=', $segmento)->where('categoria_id', '=', $categoria)->offset($offset)->limit($max_paginacao)->get();      
-////            elseif($categoria != 'categoria'):
-////                $count = guiaComercial::join('segmentos', 'segmento_id', '=', 'segmentos.id')->where('categoria_id', '=', $categoria)->count();
-////                $resposta = guiaComercial::select('guia_comercials.*')->join('segmentos', 'segmento_id', '=', 'segmentos.id')->where('categoria_id', '=', $categoria)->offset($offset)->limit($max_paginacao)->get();      
-////            elseif($segmento != 'segmento' and $cidade  != 'cidade'):
-////                $count = guiaComercial::where('cidade', 'like', '%' . $cidade . '%', 'and')->where('segmento_id', '=', $segmento)->count();
-////                $resposta = guiaComercial::where('cidade', 'like', '%' . $cidade . '%', 'and')->where('segmento_id', '=', $segmento)->offset($offset)->limit($max_paginacao)->get();
-////            elseif($segmento != 'segmento'):
-////                $count = guiaComercial::where('segmento_id', '=', $segmento)->count();
-////                $resposta = guiaComercial::where('segmento_id', '=', $segmento)->offset($offset)->limit($max_paginacao)->get();
-////            elseif($cidade  != 'cidade'):
-////                $count = guiaComercial::where('cidade', 'like', '%' . $cidade . '%')->count();
-////                $resposta = guiaComercial::where('cidade', 'like', '%' . $cidade . '%')->offset($offset)->limit($max_paginacao)->get();
-////            else:
-////                $count = guiaComercial::count();
-////                $resposta = guiaComercial::offset($offset)->limit($max_paginacao)->get();
-////        endif;
-//        
-//        $a = 0;        
-//        while($a <= ceil($count / $max_paginacao - $max_paginacao)):
-//            $nav[] = $a + 1;
-//            $a++;
-//        endwhile;        
-//        
-//        $resposta->transform(function($item, $key){;
-//            return [
-//                'id' => $item->id,
-//                'nome' => $item->nome,
-//                'endereco' => $item->endereco,
-//                'telefones' => $item->telefones,
-//                'capa' => !$item->capa ? url('uploads/guiaComercial/guia.jpg') : $item->capa,
-//                'site' => contato_web::where('guia_id', '=', $item->id, 'and')->where('nome', '=', 'site')->first(),
-//                'email' => contato_web::where('guia_id', '=', $item->id, 'and')->where('nome', '=', 'email')->first()
-//            ];
-//        });
-//        
-//        return compact('resposta', 'nav');
-//    }
-//    
-//    public function quantidade() {       
-//        $count = guiaComercial::count();
-//        
-//        $a = 1;        
-//        while($a <= ceil($count / 1 * 1)):
-//            $nav[] = $a;
-//            $a++;
-//        endwhile;
-//        
-//        return compact('count', 'nav');
-//    }
 }

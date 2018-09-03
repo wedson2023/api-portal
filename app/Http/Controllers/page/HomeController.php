@@ -9,7 +9,7 @@ use App\segmentos;
 use App\guiaComercial;
 
 class HomeController extends Controller
-{
+{    
     public function getHome() {
         $resposta = [             
             'transportes' => segmentos::select('id', 'nome')->where('categoria_id', '=', 5, 'and')->whereIn('id', [18, 19, 20, 21, 22])->get(),
@@ -43,7 +43,7 @@ class HomeController extends Controller
                     'endereco' => $item->endereco
                 ];
             }),
-            'empresasDestaques' => guiaComercial::whereNotNull('capa')->orderByRaw('rand()')->limit(14)->get()->transform(function($item, $key){
+            'empresasDestaques' => guiaComercial::where('destaque', '=', 1)->orderByRaw('rand()')->limit(14)->get()->transform(function($item, $key){
                 return [
                     'id' => $item->id,
                     'capa' => $item->capa ? url('uploads/guiaComercial/' . $item->capa) : url('uploads/guiaComercial/guia.jpg'),
@@ -67,7 +67,7 @@ class HomeController extends Controller
                     'nome' => $item->nome,
                     'endereco' => $item->endereco
                 ];
-            }),
+            })
         ];
 
         return compact('resposta');
