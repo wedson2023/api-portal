@@ -15,4 +15,18 @@ class ContatosController extends Controller
         $resposta = contato::destroy($request->input('id'));
         return compact('resposta');
     }
+
+    public function cadastrar(Request $request){        
+        $contato = new contato();
+        $contato->nome = $request->input('nome');
+        $contato->email = $request->input('email');
+        $contato->telefone = $request->input('telefone');
+        $contato->estado = $request->input('estado');
+        $contato->cidade = $request->input('cidade');
+        $contato->mensagem = $request->input('mensagem');
+
+        $resposta = $contato->save();
+
+        return compact('resposta');
+    }
 }

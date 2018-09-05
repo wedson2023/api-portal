@@ -36,8 +36,14 @@ Route::get('/guia-comercial/page/quantidade', 'page\GuiaComercialController@quan
 Route::get('/guia-comercial/page/segmentos', 'page\GuiaComercialController@listarSegmentos');
 Route::get('/guia-comercial/page/{pagina}/{segmento}/{cidade}/{categoria}', 'page\GuiaComercialController@listarEmpresas');
 
+// segmento
+
 Route::get('/segmentos/listar', 'SegmentosController@listar');
 Route::get('/segmentos/{segmento}', 'SegmentosController@getSegmento');
+
+// contato
+
+Route::post('/contatos/cadastrar', 'ContatosController@cadastrar');
 
 Route::group(['middleware' => 'jwt'], function()
 {
@@ -79,6 +85,6 @@ Route::group(['middleware' => 'jwt'], function()
    Route::post('/banner/deletar', 'BannerController@deletar');
    
    Route::get('/contatos/listar-todos', 'ContatosController@listarTodos');
-   Route::post('/contatos/deletar', 'ContatosController@deletar');
+   Route::post('/contatos/deletar', 'ContatosController@deletar');   
    
 });

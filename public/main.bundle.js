@@ -1,4 +1,4 @@
-webpackJsonp(["main"],{
+﻿webpackJsonp(["main"],{
 
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /***/ (function(module, exports) {
@@ -417,14 +417,14 @@ var BannerSlideComponent = /** @class */ (function () {
 /***/ "./src/app/contato/contato.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"conteiner\">\r\n  <form>\r\n    <h3>Contato</h3>\r\n    <p>\r\n      <strong>Dúvidas, Sugestões, Reclamações, Guia Comercial?</strong>\r\n      Seu Contato é muito importante para nós. Preencha os campos abaixo corretamente, que entraremos em contato o mais rápido possível.\r\n    </p>\r\n\r\n    <label>\r\n      <span>Nome Completo</span>\r\n      <input class=\"nome\" type=\"text\" required>\r\n    </label>\r\n    <div>\r\n      <label>\r\n        <span>E-mail</span>\r\n        <input type=\"text\" required>\r\n      </label>\r\n      <label>\r\n        <span>Telefone</span>\r\n        <input type=\"text\">\r\n      </label>\r\n    </div>\r\n    <div>\r\n      <label>\r\n        <span>Estado</span>\r\n        <select>\r\n            <option value=\"AC\">Acre</option>\r\n            <option value=\"AL\">Alagoas</option>\r\n            <option value=\"AP\">Amapá</option>\r\n            <option value=\"AM\">Amazonas</option>\r\n            <option value=\"BA\">Bahia</option>\r\n            <option value=\"CE\">Ceará</option>\r\n            <option value=\"DF\">Distrito Federal</option>\r\n            <option value=\"ES\">Espírito Santo</option>\r\n            <option value=\"GO\">Goiás</option>\r\n            <option value=\"MA\">Maranhão</option>\r\n            <option value=\"MT\">Mato Grosso</option>\r\n            <option value=\"MS\">Mato Grosso do Sul</option>\r\n            <option value=\"MG\">Minas Gerais</option>\r\n            <option value=\"PA\">Pará</option>\r\n            <option value=\"PB\">Paraíba</option>\r\n            <option value=\"PR\">Paraná</option>\r\n            <option value=\"PE\">Pernambuco</option>\r\n            <option value=\"PI\">Piauí</option>\r\n            <option value=\"RJ\">Rio de Janeiro</option>\r\n            <option value=\"RN\">Rio Grande do Norte</option>\r\n            <option value=\"RS\">Rio Grande do Sul</option>\r\n            <option value=\"RO\">Rondônia</option>\r\n            <option value=\"RR\">Roraima</option>\r\n            <option value=\"SC\">Santa Catarina</option>\r\n            <option value=\"SP\">São Paulo</option>\r\n            <option value=\"SE\">Sergipe</option>\r\n            <option value=\"TO\">Tocantins</option>\r\n        </select>\r\n      </label>\r\n      <label>\r\n        <span>Cidade</span>\r\n        <input type=\"text\">\r\n      </label>\r\n    </div>\r\n    <label>\r\n      <span>Mensagem</span>\r\n      <textarea cols=\"30\" required></textarea>\r\n    </label>\r\n    <input value=\"ENVIAR\" type=\"submit\">\r\n  </form>\r\n  <section class=\"segmentos\">\r\n    <div>\r\n      <header>\r\n        <h3>Segmentos</h3> \r\n      </header>\r\n      <a href=\"javascript:void(0)\">Academia</a>\r\n      <a href=\"javascript:void(0)\">Açai</a>\r\n      <a href=\"javascript:void(0)\">Acessórios p/ Veiculos</a>\r\n      <a href=\"javascript:void(0)\">Açougue</a>\r\n      <a href=\"javascript:void(0)\">Adapec</a>\r\n      <a href=\"javascript:void(0)\">Pizzaria</a>\r\n      <a href=\"javascript:void(0)\">Areia e Seixo</a>\r\n      <a href=\"javascript:void(0)\">Calçados</a>\r\n      <a href=\"javascript:void(0)\">Gráfica</a>\r\n      <a href=\"javascript:void(0)\">Agência Bancaria</a>\r\n      <a href=\"javascript:void(0)\">Agropecuária</a>\r\n      <a href=\"javascript:void(0)\">Alarme</a>\r\n      <a href=\"javascript:void(0)\">Ar Condicionado</a>\r\n    </div>\r\n  </section>\r\n</div>\r\n"
+module.exports = "<div class=\"conteiner\">\r\n  <form (ngSubmit)=\"cadastrar(contato)\">\r\n    <h3>Contato</h3>\r\n    <p>\r\n      <strong>Dúvidas, Sugestões, Reclamações, Guia Comercial?</strong>\r\n      Seu Contato é muito importante para nós. Preencha os campos abaixo corretamente, que entraremos em contato o mais rápido possível.\r\n    </p>\r\n\r\n    <label>\r\n      <span>Nome Completo</span>\r\n      <input [(ngModel)]=\"contato.nome\" name=\"nome\" class=\"nome\" type=\"text\" required>\r\n    </label>\r\n    <div>\r\n      <label>\r\n        <span>E-mail</span>\r\n        <input [(ngModel)]=\"contato.email\" name=\"email\" type=\"text\" required>\r\n      </label>\r\n      <label>\r\n        <span>Telefone</span>\r\n        <input [(ngModel)]=\"contato.telefone\" name=\"telefone\" type=\"text\">\r\n      </label>\r\n    </div>\r\n    <div>\r\n      <label>\r\n        <span>Estado</span>\r\n        <select required [(ngModel)]=\"contato.estado\" name=\"estado\">\r\n            <option value=\"AC\">Acre</option>\r\n            <option value=\"AL\">Alagoas</option>\r\n            <option value=\"AP\">Amapá</option>\r\n            <option value=\"AM\">Amazonas</option>\r\n            <option value=\"BA\">Bahia</option>\r\n            <option value=\"CE\">Ceará</option>\r\n            <option value=\"DF\">Distrito Federal</option>\r\n            <option value=\"ES\">Espírito Santo</option>\r\n            <option value=\"GO\">Goiás</option>\r\n            <option value=\"MA\">Maranhão</option>\r\n            <option value=\"MT\">Mato Grosso</option>\r\n            <option value=\"MS\">Mato Grosso do Sul</option>\r\n            <option value=\"MG\">Minas Gerais</option>\r\n            <option value=\"PA\">Pará</option>\r\n            <option value=\"PB\">Paraíba</option>\r\n            <option value=\"PR\">Paraná</option>\r\n            <option value=\"PE\">Pernambuco</option>\r\n            <option value=\"PI\">Piauí</option>\r\n            <option value=\"RJ\">Rio de Janeiro</option>\r\n            <option value=\"RN\">Rio Grande do Norte</option>\r\n            <option value=\"RS\">Rio Grande do Sul</option>\r\n            <option value=\"RO\">Rondônia</option>\r\n            <option value=\"RR\">Roraima</option>\r\n            <option value=\"SC\">Santa Catarina</option>\r\n            <option value=\"SP\">São Paulo</option>\r\n            <option value=\"SE\">Sergipe</option>\r\n            <option value=\"TO\">Tocantins</option>\r\n        </select>\r\n      </label>\r\n      <label>\r\n        <span>Cidade</span>\r\n        <input required [(ngModel)]=\"contato.cidade\" name=\"cidade\" type=\"text\">\r\n      </label>\r\n    </div>\r\n    <label>\r\n      <span>Mensagem</span>\r\n      <textarea required [(ngModel)]=\"contato.mensagem\" name=\"mensagem\" cols=\"30\" required></textarea>\r\n    </label>\r\n    <input value=\"ENVIAR\" type=\"submit\">\r\n  </form>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ "./src/app/contato/contato.component.sass":
 /***/ (function(module, exports) {
 
-module.exports = "div.conteiner {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  div.conteiner form {\n    width: 70%; }\n  div.conteiner form h2 {\n      font-size: 1.5em; }\n  div.conteiner form p {\n      color: #666666; }\n  div.conteiner form strong {\n      margin-top: 10px;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex; }\n  div.conteiner form label {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      -webkit-box-pack: justify;\n          -ms-flex-pack: justify;\n              justify-content: space-between;\n      margin-top: 15px; }\n  div.conteiner form input.nome, div.conteiner form select.nome {\n      width: 100%; }\n  div.conteiner form input, div.conteiner form select {\n      padding: 5px;\n      outline: none;\n      border: #cccccc solid thin;\n      color: #666666; }\n  div.conteiner form select {\n      padding: 7px; }\n  div.conteiner form span {\n      font-size: 0.9em;\n      color: #666666; }\n  div.conteiner form textarea {\n      width: 100%;\n      height: 150px;\n      outline: none;\n      border: #cccccc solid thin;\n      padding: 5px; }\n  div.conteiner form div {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: justify;\n          -ms-flex-pack: justify;\n              justify-content: space-between; }\n  div.conteiner form div label {\n        width: 48%; }\n  div.conteiner form input[type=submit], div.conteiner form select[type=submit] {\n      padding: 10px;\n      color: #ffffff;\n      cursor: pointer;\n      background: #325fac;\n      width: 35%;\n      margin: 10px auto;\n      outline: none;\n      display: block;\n      font-size: 0.9em; }\n  div.conteiner section.segmentos {\n    width: 27%; }\n  div.conteiner section.segmentos div {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      background: #f1f1f1;\n      border: solid thin #f1f1f1; }\n  div.conteiner section.segmentos div header {\n        background: #a50006;\n        padding: 10px;\n        color: #ffffff;\n        text-align: center; }\n  div.conteiner section.segmentos div header h3 {\n          font-size: 1.2em; }\n  div.conteiner section.segmentos div a {\n        color: #666666;\n        text-decoration: none;\n        padding: 7px 5px;\n        border-bottom: solid thin #cccccc; }\n  div.conteiner section.segmentos div a:hover {\n          text-decoration: underline; }\n  @media screen and (max-width: 1024px) {\n  div.conteiner {\n    display: block; }\n    div.conteiner form {\n      width: 100%;\n      padding: 0 10px; }\n    div.conteiner section.segmentos {\n      display: none; } }\n"
+module.exports = "div.conteiner {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  div.conteiner form {\n    width: 100%; }\n  div.conteiner form h2 {\n      font-size: 1.5em; }\n  div.conteiner form p {\n      color: #666666; }\n  div.conteiner form strong {\n      margin-top: 10px;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex; }\n  div.conteiner form label {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      -webkit-box-pack: justify;\n          -ms-flex-pack: justify;\n              justify-content: space-between;\n      margin-top: 15px; }\n  div.conteiner form input.nome, div.conteiner form select.nome {\n      width: 100%; }\n  div.conteiner form input, div.conteiner form select {\n      padding: 5px;\n      outline: none;\n      border: #cccccc solid thin;\n      color: #666666; }\n  div.conteiner form select {\n      padding: 7px; }\n  div.conteiner form span {\n      font-size: 0.9em;\n      color: #666666; }\n  div.conteiner form textarea {\n      width: 100%;\n      height: 150px;\n      outline: none;\n      border: #cccccc solid thin;\n      padding: 5px; }\n  div.conteiner form div {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: justify;\n          -ms-flex-pack: justify;\n              justify-content: space-between; }\n  div.conteiner form div label {\n        width: 48%; }\n  div.conteiner form input[type=submit], div.conteiner form select[type=submit] {\n      padding: 10px;\n      color: #ffffff;\n      cursor: pointer;\n      background: #325fac;\n      width: 35%;\n      margin: 10px auto;\n      outline: none;\n      display: block;\n      font-size: 0.9em; }\n  div.conteiner section.segmentos {\n    width: 27%; }\n  div.conteiner section.segmentos div {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      background: #f1f1f1;\n      border: solid thin #f1f1f1; }\n  div.conteiner section.segmentos div header {\n        background: #a50006;\n        padding: 10px;\n        color: #ffffff;\n        text-align: center; }\n  div.conteiner section.segmentos div header h3 {\n          font-size: 1.2em; }\n  div.conteiner section.segmentos div a {\n        color: #666666;\n        text-decoration: none;\n        padding: 7px 5px;\n        border-bottom: solid thin #cccccc; }\n  div.conteiner section.segmentos div a:hover {\n          text-decoration: underline; }\n  @media screen and (max-width: 1024px) {\n  div.conteiner {\n    display: block; }\n    div.conteiner form {\n      width: 100%;\n      padding: 0 10px; }\n    div.conteiner section.segmentos {\n      display: none; } }\n"
 
 /***/ }),
 
@@ -435,6 +435,7 @@ module.exports = "div.conteiner {\n  display: -webkit-box;\n  display: -ms-flexb
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContatoComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_progressbar__ = __webpack_require__("./node_modules/ng2-progressbar/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__http_service__ = __webpack_require__("./src/app/http.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -446,12 +447,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var ContatoComponent = /** @class */ (function () {
-    function ContatoComponent(progresso) {
+    function ContatoComponent(progresso, http) {
         this.progresso = progresso;
+        this.http = http;
+        this.contato = {
+            nome: null,
+            email: null,
+            telefone: null,
+            estado: null,
+            cidade: null,
+            mensagem: null,
+        };
         this.progresso.start();
     }
     ContatoComponent.prototype.ngOnInit = function () {
+    };
+    ContatoComponent.prototype.cadastrar = function (dados) {
+        var _this = this;
+        if (!this.contato.nome || !this.contato.email || !this.contato.mensagem || !this.contato.cidade || !this.contato.estado) {
+            alert('Todos os campos são obrigatórios');
+        }
+        else {
+            this.progresso.start();
+            this.http.ApiPost('contatos/cadastrar', dados).subscribe(function (response) {
+                _this.contato = {
+                    nome: null,
+                    email: null,
+                    telefone: null,
+                    estado: null,
+                    cidade: null,
+                    mensagem: null,
+                };
+                _this.progresso.done();
+                alert('Cadastro realizado com sucesso.');
+            });
+        }
     };
     ContatoComponent.prototype.ngAfterContentInit = function () {
         this.progresso.done();
@@ -462,7 +494,8 @@ var ContatoComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/contato/contato.component.html"),
             styles: [__webpack_require__("./src/app/contato/contato.component.sass")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ng2_progressbar__["b" /* NgProgressService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ng2_progressbar__["b" /* NgProgressService */],
+            __WEBPACK_IMPORTED_MODULE_2__http_service__["a" /* HttpService */]])
     ], ContatoComponent);
     return ContatoComponent;
 }());
@@ -1276,7 +1309,7 @@ var QuemSomosComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
     production: false,
-    api: 'http://portal.test/api/'
+    api: 'http://portaldoguia.com.br/api/'
 };
 
 
