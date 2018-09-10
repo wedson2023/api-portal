@@ -15,7 +15,7 @@ class GuiaComercialController extends UploadController
     }
     
     public function listar() {
-        $registros = guiaComercial::Paginate(10);
+        $registros = guiaComercial::orderBy('id', 'desc')->Paginate(100);
         return compact('registros');
     }
     

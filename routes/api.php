@@ -32,6 +32,7 @@ Route::get('/banner', 'BannerController@listarBanner');
 
 // guia comercial
 
+Route::post('/guia-comercial/cadastro', 'GuiaComercialController@cadastro'); 
 Route::get('/guia-comercial/page/quantidade', 'page\GuiaComercialController@quantidade');
 Route::get('/guia-comercial/page/segmentos', 'page\GuiaComercialController@listarSegmentos');
 Route::get('/guia-comercial/page/{pagina}/{segmento}/{cidade}/{categoria}', 'page\GuiaComercialController@listarEmpresas');
@@ -39,7 +40,12 @@ Route::get('/guia-comercial/page/{pagina}/{segmento}/{cidade}/{categoria}', 'pag
 // segmento
 
 Route::get('/segmentos/listar', 'SegmentosController@listar');
+Route::get('/segmentos-por-categoria/{categoria}', 'SegmentosController@categoria');
 Route::get('/segmentos/{segmento}', 'SegmentosController@getSegmento');
+
+// categorias 
+
+Route::get('/categorias/listar-todos', 'CategoriasController@listarTodos');
 
 // contato
 
@@ -57,7 +63,6 @@ Route::group(['middleware' => 'jwt'], function()
    
    Route::get('/guia-comercial/listar', 'GuiaComercialController@listar'); 
    Route::get('/guia-comercial/listar/{id}', 'GuiaComercialController@empresa'); 
-   Route::post('/guia-comercial/cadastro', 'GuiaComercialController@cadastro'); 
    Route::post('/guia-comercial/editar', 'GuiaComercialController@editar'); 
    Route::post('/guia-comercial/deletar', 'GuiaComercialController@deletar'); 
    
@@ -72,7 +77,6 @@ Route::group(['middleware' => 'jwt'], function()
    Route::post('/eventos/deletar', 'EventosController@deletar');
    
    Route::get('/categorias/listar', 'CategoriasController@listar');
-   Route::get('/categorias/listar-todos', 'CategoriasController@listarTodos');
    Route::post('/categorias/cadastro', 'CategoriasController@cadastro');
    Route::post('/categorias/deletar', 'CategoriasController@deletar');
    
