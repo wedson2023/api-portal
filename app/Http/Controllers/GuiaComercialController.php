@@ -5,12 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\guiaComercial;
 use App\contato_web;
+use App\botoes;
+use App\galeria;
 class GuiaComercialController extends UploadController
 {
     
     public function empresa($id){
         $resposta = guiaComercial::find($id);
         $resposta->contato = $resposta->contato;
+        $resposta->botao = botoes::limit(4)->get();
+        $resposta->galeria = galeria::where('guia_id', '=', $id)
+            ->limit(8)
+            ->get()
+            ->transform(function($item,$key){
+                return [
+                    'nome' => url('uploads/galeria/' . $item->nome)
+                ];
+            });
         return compact('resposta');
     }
     

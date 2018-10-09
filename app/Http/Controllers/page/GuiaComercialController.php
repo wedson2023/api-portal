@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\guiaComercial;
 use App\contato_web;
+use App\botoes;
 
 class GuiaComercialController extends Controller
 {
+
     public function listarSegmentos() {
         $resposta = guiaComercial::select('segmentos.id', 'segmentos.nome')->join('segmentos', 'segmento_id', '=', 'segmentos.id')->distinct()->get();
         return compact('resposta');
