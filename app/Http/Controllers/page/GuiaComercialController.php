@@ -157,7 +157,7 @@ class GuiaComercialController extends Controller
         $count = guiaComercial::count();
         
         $a = 1;        
-        while($a <= ceil($count / 1 * 1)):
+        while($a <= ceil($count / 15 - 15)):
             $nav[] = $a;
             $a++;
         endwhile;
