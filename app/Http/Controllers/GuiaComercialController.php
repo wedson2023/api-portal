@@ -7,6 +7,7 @@ use App\guiaComercial;
 use App\contato_web;
 use App\botoes;
 use App\galeria;
+use App\videos;
 class GuiaComercialController extends UploadController
 {
     
@@ -14,6 +15,7 @@ class GuiaComercialController extends UploadController
         $resposta = guiaComercial::find($id);
         $resposta->contato = $resposta->contato;
         $resposta->botao = botoes::limit(4)->get();
+        $resposta->videos = videos::orderBy('id', 'desc')->first();
         $resposta->galeria = galeria::where('guia_id', '=', $id)
             ->limit(8)
             ->get()
@@ -65,6 +67,19 @@ class GuiaComercialController extends UploadController
         $resposta->destaque = $request->input('destaque'); 
         
         $resposta->save();
+
+        if(isset($_FILES['galeria'])):
+            foreach($_FILES['galeria']['name'] as $key => $name):
+                $file = [ 'name' => $name, 'tmp_name' => $_FILES['galeria']['tmp_name'][$key] ];
+                $nome = UploadController::UploadImage($file, 'uploads/galeria/', 700);
+
+                galeria::insert([
+                    'guia_id' => $resposta->id,
+                    'nome' => $nome
+                ]);
+
+            endforeach;
+        endif;
         
         foreach($request->input('contato') as $key => $val):
             contato_web::where('guia_id', '=', $request->input('id'), 'and')->where('nome', '=', $key)->update([ 'nome' => $key, 'url' => $val ]);
@@ -95,6 +110,19 @@ class GuiaComercialController extends UploadController
         $resposta->destaque = $request->input('destaque');
         
         $resposta->save();
+
+        if(isset($_FILES['galeria'])):
+            foreach($_FILES['galeria']['name'] as $key => $name):
+                $file = [ 'name' => $name, 'tmp_name' => $_FILES['galeria']['tmp_name'][$key] ];
+                $nome = UploadController::UploadImage($file, 'uploads/galeria/', 700);
+
+                galeria::insert([
+                    'guia_id' => $resposta->id,
+                    'nome' => $nome
+                ]);
+
+            endforeach;
+        endif;
         
         foreach($request->input('contato') as $key => $val):
             contato_web::insert([ 'guia_id' => $resposta->id, 'nome' => $key, 'url' => $val ]);

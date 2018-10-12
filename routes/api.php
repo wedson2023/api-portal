@@ -90,6 +90,8 @@ Route::group(['middleware' => 'jwt'], function()
    Route::post('/banner/deletar', 'BannerController@deletar');
    
    Route::get('/contatos/listar-todos', 'ContatosController@listarTodos');
-   Route::post('/contatos/deletar', 'ContatosController@deletar');   
+   Route::post('/contatos/deletar', 'ContatosController@deletar'); 
+
+   Route::post('/videos/cadastro', 'VideosController@cadastro');  
    
 });

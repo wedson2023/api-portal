@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\noticias;
 use App\segmentos;
 use App\guiaComercial;
+use App\videos;
 
 class HomeController extends Controller
 {    
@@ -67,7 +68,8 @@ class HomeController extends Controller
                     'nome' => $item->nome,
                     'endereco' => $item->endereco
                 ];
-            })
+            }),
+            'videos' => videos::orderBy('id', 'desc')->first()
         ];
 
         return compact('resposta');
