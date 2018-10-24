@@ -8,8 +8,20 @@ use App\contato_web;
 use App\botoes;
 use App\galeria;
 use App\videos;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\sendEmail;
+
 class GuiaComercialController extends UploadController
 {
+
+    public function mensagem(Request $request){
+        $resposta = Mail::send('email.send', [], function($mensagem){
+            $mensagem->to('portaldoguia@hotmail.com');
+            $mensagem->subject('Guia Comercial');
+        });
+
+        return compact('resposta');
+    }
     
     public function empresa($id){
         $resposta = guiaComercial::find($id);

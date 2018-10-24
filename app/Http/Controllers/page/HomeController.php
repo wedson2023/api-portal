@@ -33,7 +33,8 @@ class HomeController extends Controller
                     'categoria' => substr($item->categoria, 0, 20),
                     'subtitulo' => substr($item->subtitulo, 0, 135),
                     'capa' => url('uploads/noticias/' . $item->capa),
-                    'url' => urlencode($item->titulo)
+                    'url' => urlencode($item->titulo),
+                    'segmento_id' => $item->segmento_id
                 ];
             })[0],
             'gastronomia' => guiaComercial::where('segmento_id', '=', 35)->orderByRaw('rand()')->limit(6)->get()->transform(function($item, $key){
@@ -41,7 +42,8 @@ class HomeController extends Controller
                     'id' => $item->id,
                     'capa' => $item->capa ? url('uploads/guiaComercial/' . $item->capa) : url('uploads/guiaComercial/guia.jpg'),
                     'nome' => $item->nome,
-                    'endereco' => $item->endereco
+                    'endereco' => $item->endereco,
+                    'segmento_id' => $item->segmento_id
                 ];
             }),
             'empresasDestaques' => guiaComercial::where('destaque', '=', 1)->orderByRaw('rand()')->limit(14)->get()->transform(function($item, $key){
@@ -58,7 +60,8 @@ class HomeController extends Controller
                     'id' => $item->id,
                     'capa' => $item->capa ? url('uploads/guiaComercial/' . $item->capa) : url('uploads/guiaComercial/guia.jpg'),
                     'nome' => $item->nome,
-                    'endereco' => $item->endereco
+                    'endereco' => $item->endereco,
+                    'segmento_id' => $item->segmento_id
                 ];
             }),
             'cursos' => guiaComercial::where('segmento_id', '=', 39)->orderByRaw('rand()')->limit(2)->get()->transform(function($item, $key){
@@ -66,7 +69,8 @@ class HomeController extends Controller
                     'id' => $item->id,
                     'capa' => $item->capa ? url('uploads/guiaComercial/' . $item->capa) : url('uploads/guiaComercial/guia.jpg'),
                     'nome' => $item->nome,
-                    'endereco' => $item->endereco
+                    'endereco' => $item->endereco,
+                    'segmento_id' => $item->segmento_id
                 ];
             }),
             'videos' => videos::orderBy('id', 'desc')->first()

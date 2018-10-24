@@ -39,6 +39,8 @@ Route::get('/guia-comercial/page/{pagina}/{segmento}/{cidade}/{categoria}', 'pag
 
 Route::get('/guia-comercial/listar/{id}', 'GuiaComercialController@empresa');
 
+Route::post('/mensagem', 'GuiaComercialController@mensagem');
+
 // segmento
 
 Route::get('/segmentos/listar', 'SegmentosController@listar');
