@@ -30,6 +30,10 @@ Route::get('/page/get-footer', 'page\FooterController@getFooter');
 
 Route::get('/banner', 'BannerController@listarBanner');
 
+// noticias
+
+Route::get('/noticias/page/listar', 'page\NoticiasController@listar');
+
 // guia comercial
 
 Route::post('/guia-comercial/cadastro', 'GuiaComercialController@cadastro');  
@@ -57,9 +61,9 @@ Route::post('/contatos/cadastrar', 'ContatosController@cadastrar');
 
 Route::group(['middleware' => 'jwt'], function()
 {
-   Route::get('/dashboard', 'DashboardController@index');
+   Route::get('/dashboard', 'DashboardController@index');   
    
-   Route::get('/noticias/listar', 'NoticiasController@listar'); 
+   Route::get('/noticias/listar', 'NoticiasController@listar');
    Route::get('/noticias/listar/{id}', 'NoticiasController@noticia'); 
    Route::post('/noticias/cadastro', 'NoticiasController@cadastro'); 
    Route::post('/noticias/editar', 'NoticiasController@editar'); 

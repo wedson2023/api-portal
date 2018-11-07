@@ -17,7 +17,7 @@ class EventosTableSeeder extends Seeder
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',
             'template' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'cartaz' => null,
+            'cartaz' => 'cartaz.jpg',
             'site' => null,
             'categoria_id' => 3
         ]);
@@ -27,7 +27,7 @@ class EventosTableSeeder extends Seeder
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',
             'template' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'cartaz' => null,
+            'cartaz' => 'cartaz.jpg',
             'site' => null,
             'categoria_id' => 3
         ]);
@@ -37,7 +37,7 @@ class EventosTableSeeder extends Seeder
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',
             'template' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'cartaz' => null,
+            'cartaz' => 'cartaz.jpg',
             'site' => null,
             'categoria_id' => 3
         ]);
@@ -47,7 +47,7 @@ class EventosTableSeeder extends Seeder
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',
             'template' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'cartaz' => null,
+            'cartaz' => 'cartaz.jpg',
             'site' => null,
             'categoria_id' => 3
         ]);
@@ -57,7 +57,7 @@ class EventosTableSeeder extends Seeder
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',
             'template' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'cartaz' => null,
+            'cartaz' => 'cartaz.jpg',
             'site' => null,
             'categoria_id' => 3
         ]);
@@ -67,7 +67,7 @@ class EventosTableSeeder extends Seeder
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',
             'template' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'cartaz' => null,
+            'cartaz' => 'cartaz.jpg',
             'site' => null,
             'categoria_id' => 3
         ]);
@@ -77,7 +77,7 @@ class EventosTableSeeder extends Seeder
             'local' => 'Local: 23h - Expoara Porto Franco/MA',
             'data' => '2018-07-10 14:50:00',
             'template' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'cartaz' => null,
+            'cartaz' => 'cartaz.jpg',
             'site' => null,
             'categoria_id' => 3
         ]);
